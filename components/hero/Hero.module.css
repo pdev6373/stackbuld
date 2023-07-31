@@ -35,6 +35,7 @@
   line-height: 1.0556;
   text-align: center;
   margin-bottom: 17px;
+  max-width: 1123px;
 }
 
 .heroBody {
@@ -45,6 +46,7 @@
   text-align: center;
   margin-bottom: 32px;
   padding-inline: 16.87%;
+  max-width: calc(745px + 32%);
 }
 
 .heroButton {
@@ -119,7 +121,6 @@
   }
 
   .heroTitle {
-    font-size: 24px;
     margin-bottom: 20px;
   }
 }

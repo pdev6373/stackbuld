@@ -5,3 +5,4 @@ export { default as Footer } from "./Footer";
 export { default as Achievements } from "./Achievements";
 export { default as Industries } from "./Industries";
 export { default as Companies } from "./Companies";
+export { default as Attributes } from "./Attributes";

@@ -55,8 +55,10 @@ export type HeroType = {
 };
 
 export type AttributeType = {
+  image: string;
   headerTitle: string;
   header: string;
   text1: string;
   text2: string;
+  shouldReverse?: boolean;
 };

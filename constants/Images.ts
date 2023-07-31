@@ -52,6 +52,9 @@ const Images = {
   companySix: require("../assets/images/company-6.png"),
   companySeven: require("../assets/images/company-7.png"),
   companyEight: require("../assets/images/company-8.png"),
+  attributeOne: require("../assets/images/attribute-1.png"),
+  attributeTwo: require("../assets/images/attribute-2.png"),
+  attributeThree: require("../assets/images/attribute-3.png"),
 };
 
 export default Images;

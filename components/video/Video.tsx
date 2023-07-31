@@ -15,13 +15,14 @@ export default function Video() {
         />
       </div>
 
-      <Image
-        src={Images.play}
-        alt="play icon"
-        className={styles.playIcon}
-        width={80}
-        height={80}
-      />
+      <div className={styles.playIconWrapper}>
+        <Image
+          src={Images.play}
+          alt="play icon"
+          className={styles.playIcon}
+          fill
+        />
+      </div>
     </section>
   );
 }

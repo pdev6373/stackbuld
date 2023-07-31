@@ -151,15 +151,21 @@
 }
 
 @media (max-width: 700px) {
-  .industryName,
-  .industryNameAlone {
+  .industryName {
     font-size: 28px;
   }
 
+  .industryDetails {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .industryOverlay {
+    background-color: #161a1dd9;
+  }
+
   .industryNameAlone {
-    left: 24px;
-    right: 24px;
-    bottom: 24px;
+    display: none;
   }
 
   .industries {

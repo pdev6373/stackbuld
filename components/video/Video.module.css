@@ -1,19 +1,26 @@
 .video {
   position: relative;
-  box-shadow: 10px 25px 50px 0px #0220201a;
+  /* box-shadow: 10px 25px 50px 0px #0220201a; */
 }
 
-.playIcon {
+.playIconWrapper {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 80px;
+  aspect-ratio: 1 / 1;
+}
+
+.playIcon {
+  position: relative !important;
+  width: 100%;
+  height: 100%;
 }
 
 .thumbnailWrapper {
   position: relative;
   width: 100%;
-  box-shadow: 10px 25px 50px 0px #0220201a;
 }
 
 .thumbnailImage {
@@ -21,5 +28,16 @@
   width: 100% !important;
   position: relative !important;
   height: unset !important;
-  box-shadow: 10px 25px 50px 0px #0220201a;
+}
+
+@media (max-width: 700px) {
+  .playIconWrapper {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .playIconWrapper {
+    width: 40px;
+  }
 }

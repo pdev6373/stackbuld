@@ -11,4 +11,5 @@ export { default as Services } from "./services/Services";
 export { default as Industries } from "./industries/Industries";
 export { default as Companies } from "./companies/Companies";
 export { default as HeaderAndHero } from "./headerAndHero/HeaderAndHero";
+export { default as Attribute } from "./attribute/Attribute";
 export { default as Attributes } from "./attributes/Attributes";
