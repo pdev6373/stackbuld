@@ -1,0 +1,92 @@
+.review {
+  background: #161a1d;
+  grid-column: span 3;
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
+  padding-left: 64px;
+}
+
+.reviewContent {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #f6f7f9;
+  width: 43%;
+  flex-shrink: 0;
+}
+
+.quote {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.reviewBody {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.reviewName {
+  color: #f6f7f9;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 23px;
+}
+
+.reviewRole {
+  color: #a3b2c2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.reviewImageWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.reviewImage {
+  object-fit: cover;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+  /* object-position: bottom left; */
+}
+
+@media (max-width: 900px) {
+  .review {
+    padding: 0;
+  }
+
+  .reviewContent {
+    padding: 48px 0 48px 48px;
+    width: 65%;
+  }
+}
+
+@media (max-width: 700px) {
+  .reviewContent {
+    width: 100%;
+    padding: 40px 30px;
+    gap: 16px;
+  }
+
+  .reviewBody {
+    gap: 16px;
+  }
+
+  .reviewImageWrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviewContent {
+    padding: 24px;
+    gap: 30px;
+  }
+}

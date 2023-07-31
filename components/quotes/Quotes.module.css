@@ -1,0 +1,211 @@
+.quotesWrapper {
+  display: flex;
+  gap: 32px;
+}
+
+.quotes {
+  padding-inline: clamp(40px, 5.555555vw, 80px);
+  background: #161a1d;
+  padding-block: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.achievements {
+  background: #f0f8ff;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 48px;
+  padding-block: 24px;
+  border-radius: 16px;
+  flex: 1;
+}
+
+.achievement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding-block: 48px;
+}
+
+.achievementBorder {
+  border-block: 1px solid #a3b2c2;
+}
+
+.achievementTitleWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.achievementTitle {
+  color: #161a1d;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+}
+
+.achievementText {
+  color: #a3b2c2;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 29px;
+}
+
+.quotesDisplay {
+  flex: 2;
+  background: url("../../assets/images/quote.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 120px;
+}
+
+.quoteTitle {
+  color: #f6f7f9;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.quotesHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quotesBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.quoteTime {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quotesNavigation {
+  display: flex;
+  gap: 24px;
+}
+
+.quotesBottomMain {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.quotesBottomTitle {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 29px;
+}
+
+.quotesBottomText {
+  color: #a3b2c2;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.sectionTitleDark {
+  font-size: clamp(36px, 3.33333vw, 48px);
+  font-weight: 700;
+  line-height: 1.208;
+  margin-bottom: 4px;
+  max-width: 632px;
+  color: #f6f7f9;
+}
+
+.dot {
+  color: #17c2c2;
+}
+
+@media (max-width: 1350px) {
+  .achievements {
+    padding: 0 24px;
+  }
+
+  .achievement {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding-block: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .quotes {
+    padding: 40px 24px 60px;
+  }
+
+  .quotesDisplay {
+    padding: 48px 24px;
+  }
+
+  .quoteTitle {
+    font-size: 28px;
+  }
+
+  .achievements {
+    padding: 0;
+  }
+
+  .sectionTitleDark {
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 900px) {
+  .quotesWrapper {
+    flex-direction: column;
+  }
+
+  .achievement {
+    flex-direction: row;
+    padding-block: 48px;
+    padding-inline: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitleDark {
+    font-size: 24px;
+  }
+
+  .achievement {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding-block: 30px;
+    gap: 24px;
+  }
+
+  .quotesBottom {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .achievementTitle {
+    font-size: 36px;
+  }
+
+  .quotesHeader {
+    gap: 16px;
+  }
+
+  .quoteTitle {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+}

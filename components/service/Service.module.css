@@ -1,0 +1,84 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bigIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  color: #161a1d;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 29px;
+}
+
+.pointWraper {
+  display: flex;
+  gap: 12px;
+}
+
+.point {
+  color: #4b5e71;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.dot {
+  height: 8px;
+  max-height: 8px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  margin-top: 9.5px;
+}
+
+.pointsWraper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.button {
+  margin: 16px;
+  margin-top: 0;
+  display: flex;
+  background: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-out;
+  color: #17c2c2;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 23px;
+}
+
+.button:hover {
+  background-color: inherit;
+  outline: 4px solid #fff;
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 24px;
+  }
+}

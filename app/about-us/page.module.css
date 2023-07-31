@@ -1,0 +1,18 @@
+.videoWrapper {
+  /* transform: translateY(-33%); */
+  transform: translateY(-33%);
+  margin-bottom: -5.76%;
+  margin-inline: clamp(40px, 5.555557vw, 80px);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 4px solid #ffffff;
+}
+
+@media (max-width: 700px) {
+  .videoWrapper {
+    transform: translateY(0);
+    margin: 0;
+    border: none;
+    border-radius: 0;
+  }
+}

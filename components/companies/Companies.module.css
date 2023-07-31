@@ -1,0 +1,147 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  text-align: center;
+  padding-inline: clamp(40px, 5.555557vw, 80px);
+  padding-bottom: clamp(60px, 7.2222vw, 104px);
+}
+
+.imagesWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1150px;
+  margin-inline: auto;
+}
+
+.imageWrapperOuter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 120px;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.image {
+  position: relative !important;
+  width: unset !important;
+  height: 100% !important;
+  min-height: 32px;
+}
+
+.header {
+  color: #161a1d;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.25;
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+.achievements {
+  display: flex;
+  background: #f0f8ff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: 64px 16px;
+}
+
+.achievement {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 48px;
+  gap: 24px;
+}
+
+.achievementTitle {
+  color: #161a1d;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+}
+
+.achievementText {
+  color: #a3b2c2;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 29px;
+}
+
+.borderBlock {
+  border-inline: 1px solid #a3b2c2;
+}
+
+.achievementTitleWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 1390px) {
+  .achievement {
+    flex-direction: column;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .achievements {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .borderBlock {
+    border-block: 1px solid #a3b2c2;
+    border-inline: none;
+  }
+
+  .achievement {
+    padding: 48px;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    padding: 40px 24px 60px;
+  }
+
+  .header {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievementTitle {
+    font-size: 36px;
+  }
+
+  .achievement {
+    flex-direction: column;
+    padding: 36px 24px;
+    gap: 24px;
+  }
+
+  .header {
+    font-size: 24px;
+  }
+
+  .image {
+    min-height: 24px;
+  }
+
+  .imageWrapperOuter {
+    width: 100%;
+    height: 90px;
+  }
+}

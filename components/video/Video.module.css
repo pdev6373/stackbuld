@@ -1,0 +1,25 @@
+.video {
+  position: relative;
+  box-shadow: 10px 25px 50px 0px #0220201a;
+}
+
+.playIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.thumbnailWrapper {
+  position: relative;
+  width: 100%;
+  box-shadow: 10px 25px 50px 0px #0220201a;
+}
+
+.thumbnailImage {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+  box-shadow: 10px 25px 50px 0px #0220201a;
+}
