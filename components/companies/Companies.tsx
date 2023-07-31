@@ -11,8 +11,8 @@ export default function Companies() {
       </h3>
 
       <div className={styles.imagesWrapper}>
-        {CompaniesConstant.map((company) => (
-          <div className={styles.imageWrapperOuter}>
+        {CompaniesConstant.map((company, index) => (
+          <div className={styles.imageWrapperOuter} key={index}>
             <div className={styles.imageWrapper}>
               <Image
                 src={company}
@@ -28,6 +28,7 @@ export default function Companies() {
       <div className={styles.achievements}>
         {Achievements.map((achievement, index) => (
           <div
+            key={index}
             className={`${styles.achievement} ${
               index === 1 ? styles.borderBlock : ""
             }`}

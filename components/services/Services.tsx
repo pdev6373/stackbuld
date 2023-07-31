@@ -1,6 +1,7 @@
 import { Review, Service } from "..";
 import { Services as ServicesConstant } from "@/constants";
 import styles from "./Services.module.css";
+import { Fragment } from "react";
 
 export default function Services() {
   return (
@@ -15,13 +16,15 @@ export default function Services() {
       </div>
 
       <div className={styles.servicesMobile}>
-        {ServicesConstant.map((service) => (
-          <Service service={service} />
+        {ServicesConstant.map((service, index) => (
+          <Fragment key={index}>
+            <Service service={service} />
+          </Fragment>
         ))}
       </div>
 
-      {ServicesConstant.map((service) => (
-        <div className={styles.serviceDesktop}>
+      {ServicesConstant.map((service, index) => (
+        <div className={styles.serviceDesktop} key={index}>
           <Service service={service} />
         </div>
       ))}

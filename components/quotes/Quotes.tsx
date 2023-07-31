@@ -14,6 +14,7 @@ export default function Quotes() {
         <div className={styles.achievements}>
           {Achievements.map((achievement, index) => (
             <div
+              key={index}
               className={`${styles.achievement} ${
                 index === 1 ? styles.achievementBorder : ""
               }`}

@@ -163,8 +163,9 @@ export default function Projects() {
       </div>
 
       <div className={styles.accordion}>
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <div
+            key={index}
             className={styles.accordionPanel}
             onClick={() => accordionClickHandler(project)}
           >

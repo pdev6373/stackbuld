@@ -15,17 +15,23 @@ export default function Footer() {
 
       <div className={styles.footerNavsWrapper}>
         {FooterNav.map((nav, index) => (
-          <div className={styles.footerNavsWrapperInner}>
+          <div className={styles.footerNavsWrapperInner} key={index}>
             <h3 className={styles.footerHeader}>{nav.name}</h3>
 
             <div className={styles.footerNavs}>
               {nav.links.map((link) =>
                 link.route ? (
-                  <Link href={link.route} className={styles.footerLink}>
+                  <Link
+                    href={link.route}
+                    className={styles.footerLink}
+                    key={index}
+                  >
                     {link.name}
                   </Link>
                 ) : (
-                  <p className={styles.footerLink}>{link.name}</p>
+                  <p className={styles.footerLink} key={index}>
+                    {link.name}
+                  </p>
                 )
               )}
             </div>

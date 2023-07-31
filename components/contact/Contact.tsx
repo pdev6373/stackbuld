@@ -74,8 +74,8 @@ export default function Contact() {
         <div className={styles.line}></div>
 
         <div className={styles.formInputs}>
-          {formFields.map((field) => (
-            <div className={styles.formInputWrapper}>
+          {formFields.map((field, index) => (
+            <div className={styles.formInputWrapper} key={index}>
               <label htmlFor={field.label} className={styles.formLabel}>
                 {field.label}
                 {field.isRequired ? "*" : ""}

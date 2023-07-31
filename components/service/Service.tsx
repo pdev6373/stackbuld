@@ -28,8 +28,8 @@ export default function Service({ service }: ServiceType) {
         <h3 className={styles.title}>{service.title}</h3>
 
         <div className={styles.pointsWraper}>
-          {service.points.map((point) => (
-            <div className={styles.pointWraper}>
+          {service.points.map((point, index) => (
+            <div className={styles.pointWraper} key={index}>
               <div
                 className={styles.dot}
                 style={{ backgroundColor: service.dotColor }}

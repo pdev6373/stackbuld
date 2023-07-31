@@ -14,8 +14,8 @@ export default function Industries() {
       </div>
 
       <div className={styles.industriesWrapper}>
-        {IndustriesComponent.map((industry) => (
-          <div className={styles.industry}>
+        {IndustriesComponent.map((industry, index) => (
+          <div className={styles.industry} key={index}>
             <h3 className={styles.industryNameAlone}>{industry.name}</h3>
 
             <div className={styles.industryOverlay}></div>

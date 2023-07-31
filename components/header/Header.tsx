@@ -27,13 +27,15 @@ export default function Header() {
         </Link>
 
         <div className={styles.links}>
-          {Navs.map((nav) =>
+          {Navs.map((nav, index) =>
             nav.route ? (
-              <Link href={nav.route} className={styles.link}>
+              <Link href={nav.route} className={styles.link} key={index}>
                 {nav.name}
               </Link>
             ) : (
-              <p className={styles.link}>{nav.name}</p>
+              <p className={styles.link} key={index}>
+                {nav.name}
+              </p>
             )
           )}
         </div>
