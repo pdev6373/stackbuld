@@ -112,4 +112,8 @@
   .texts {
     gap: 12px;
   }
+
+  .wrapper {
+    gap: 36px;
+  }
 }
