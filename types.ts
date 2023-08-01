@@ -5,6 +5,7 @@ export type ServicesType = {
   icon: string;
   iconBig: string;
   dotColor: string;
+  route: string;
 };
 
 export type NavsType = {
@@ -61,4 +62,52 @@ export type AttributeType = {
   text1: string;
   text2: string;
   shouldReverse?: boolean;
+};
+
+export type FAQType = {
+  question: string;
+  answer: string;
+};
+
+type HowItWorksListType = {
+  title: string;
+  list: string[];
+};
+
+export type HowItWorksType = {
+  heading: string;
+  text1: string;
+  text2: string;
+  deliverables: HowItWorksListType;
+  teamMemebers: HowItWorksListType;
+  image: string;
+  tools: string[];
+};
+
+type ServicePageContent = {
+  topIcon: string;
+  title: string;
+  text1: string;
+  text2: string;
+  image: string;
+
+  tools: string[];
+};
+
+export type ServicePageType = {
+  bottomIcon: string;
+  bottomBackground: string;
+  content: ServicePageContent[];
+};
+
+export type WhyType = {
+  header: string;
+  body: string;
+};
+
+export type ServicesHeroType = {
+  heroTitle: string;
+  heroImage: string;
+  heroBackground: string;
+  heroColor: string;
 };

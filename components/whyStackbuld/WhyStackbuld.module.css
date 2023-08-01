@@ -1,0 +1,161 @@
+.wrapper {
+  padding-inline: clamp(40px, 5.555557vw, 80px);
+  padding-block: clamp(60px, 7.2222vw, 104px);
+  background: #161a1d;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.header,
+.questionMark {
+  font-size: clamp(36px, 3.33333vw, 48px);
+  font-weight: 700;
+  line-height: 1.208;
+  margin-bottom: 4px;
+  max-width: 632px;
+  color: #f6f7f9;
+}
+
+.questionMark {
+  color: #17c2c2;
+}
+
+.whyHeader {
+  color: #f6f7f9;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.whyBody {
+  color: #a3b2c2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.whyWrapper {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.whyWrapperInner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.why {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: url("../../assets/images/faq-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* mix-blend-mode: overlay; */
+  padding: 40px 24px;
+  border-radius: 16px;
+}
+
+.whyNumber {
+  color: transparent;
+  font-size: 200px;
+  font-weight: 700;
+  line-height: 0.85;
+  text-shadow: 4px 4px 0 transparent;
+  -webkit-text-stroke: 1px #a3b2c226;
+  flex-shrink: 0;
+}
+
+.bottom {
+  max-width: 900px;
+  margin-inline: auto;
+  margin-top: 124px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.bottomButton {
+  background: #17c2c2;
+  border-radius: 12px;
+  padding: 13px 24px;
+  color: #f6f7f9;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  transition: color background-color 0.2s ease-out;
+  border: 1px solid #17c2c2;
+}
+
+.bottomButton:hover {
+  background-color: transparent;
+  color: #17c2c2;
+}
+
+.sectionBody {
+  color: #a3b2c2;
+  font-size: clamp(36px, 3.33333vw, 48px);
+  font-weight: 700;
+  line-height: 1.208;
+}
+
+@media (max-width: 700px) {
+  .sectionBody {
+    font-size: 30px;
+  }
+
+  .header {
+    margin-bottom: 8px;
+  }
+
+  .header,
+  .questionMark {
+    font-size: 30px;
+  }
+
+  .wrapper {
+    padding: 40px 24px 60px;
+  }
+
+  .whyWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    min-width: 0;
+  }
+
+  .why {
+    padding-block: 30px;
+  }
+
+  .whyNumber {
+    font-size: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header,
+  .questionMark,
+  .sectionBody {
+    font-size: 24px;
+  }
+
+  .why {
+    flex-direction: column;
+  }
+}

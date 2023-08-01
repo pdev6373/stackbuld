@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./Hero.module.css";
-import { Images } from "@/constants";
 import { HeroType } from "@/types";
 
 export default function Hero({

@@ -13,3 +13,8 @@ export { default as Companies } from "./companies/Companies";
 export { default as HeaderAndHero } from "./headerAndHero/HeaderAndHero";
 export { default as Attribute } from "./attribute/Attribute";
 export { default as Attributes } from "./attributes/Attributes";
+export { default as FAQ } from "./faq/FAQ";
+export { default as HowWeWork } from "./howWeWork/HowWeWork";
+export { default as WhyStackbuld } from "./whyStackbuld/WhyStackbuld";
+export { default as ServiceFeatures } from "./serviceFeatures/ServiceFeatures";
+export { default as ServicesHero } from "./servicesHero/ServicesHero";

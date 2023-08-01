@@ -6,3 +6,8 @@ export { default as Achievements } from "./Achievements";
 export { default as Industries } from "./Industries";
 export { default as Companies } from "./Companies";
 export { default as Attributes } from "./Attributes";
+export { default as FAQs } from "./FAQs";
+export { default as HowWeWork } from "./HowWeWork";
+export { default as Why } from "./Why";
+export { default as ServiceFeatures } from "./ServiceFeatures";
+export { default as ServicesHero } from "./ServicesHero";

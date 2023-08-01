@@ -2,6 +2,7 @@ import { Images } from "@/constants";
 import { ServicesType } from "@/types";
 import Image from "next/image";
 import styles from "./Service.module.css";
+import Link from "next/link";
 
 type ServiceType = {
   service: ServicesType;
@@ -40,7 +41,7 @@ export default function Service({ service }: ServiceType) {
         </div>
       </div>
 
-      <button className={styles.button}>
+      <Link href={service.route} className={styles.button}>
         <p>Learn more</p>
         <Image
           src={Images.learnMore}
@@ -48,7 +49,7 @@ export default function Service({ service }: ServiceType) {
           width={24}
           height={24}
         />
-      </button>
+      </Link>
     </div>
   );
 }

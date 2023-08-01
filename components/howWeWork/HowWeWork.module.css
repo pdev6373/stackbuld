@@ -1,0 +1,237 @@
+.wrapper {
+  background: #ffffff;
+  padding-block: 164px;
+  padding-inline: clamp(40px, 5.555555vw, 80px);
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.dot {
+  color: #17c2c2;
+}
+
+.sectionTitle {
+  color: #161a1d;
+  font-size: clamp(36px, 3.33333vw, 48px);
+  font-weight: 700;
+  line-height: 1.208;
+  margin-bottom: 4px;
+  max-width: 632px;
+}
+
+.sectionBody {
+  color: #a3b2c2;
+  font-size: clamp(36px, 3.33333vw, 48px);
+  font-weight: 700;
+  line-height: 1.208;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 632px;
+}
+
+.headerTexts {
+  display: flex;
+  gap: 16px;
+}
+
+.headerText {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.208;
+  color: #161a1d;
+}
+
+.processSection {
+  max-width: 786px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.headerBodyText {
+  color: #4b5e71;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 29px;
+}
+
+.allProcesses {
+  padding: 40px;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+}
+
+.process {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 57px;
+  position: relative;
+  position: sticky;
+  top: 0;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 8px;
+  transform: translateX(-50%);
+  width: 4px;
+  background: #f0f8ff;
+}
+
+.stepWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+  background: #fff;
+}
+
+.mainWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.processTitle {
+  color: #161a1d;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 29px;
+}
+
+.processList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.processListGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  column-gap: 40px;
+  row-gap: 8px;
+}
+
+.processItem {
+  display: flex;
+  gap: 12px;
+}
+
+.processItemText {
+  color: #4b5e71;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 29px;
+}
+
+.toolsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #f0f8ff;
+  max-width: 786px;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tool {
+  color: #4b5e71;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.processImageWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.processImage {
+  position: relative !important;
+  width: 100% !important;
+  height: unset !important;
+}
+
+@media (max-width: 1100px) {
+  .allProcesses {
+    padding: 0;
+  }
+
+  .headerText {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .steps {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    padding: 40px 24px 60px;
+  }
+
+  .headerText {
+    font-size: 36px;
+  }
+
+  .sectionTitle {
+    margin-bottom: 8px;
+  }
+
+  .sectionTitle,
+  .sectionBody {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle,
+  .sectionBody {
+    font-size: 24px;
+  }
+
+  .headerText {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 380px) {
+  .toolsWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .processListGrid {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 8px;
+  }
+}
