@@ -53,6 +53,15 @@ export default function Contact() {
           alt="contact image"
           width={256}
           height={375}
+          className={styles.people}
+        />
+
+        <Image
+          className={styles.peopleMobile}
+          src={Images.people}
+          alt="contact image"
+          width={179.2}
+          height={262.5}
         />
 
         <div className={styles.contactTopTexts}>

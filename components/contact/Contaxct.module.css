@@ -137,6 +137,14 @@
   color: #17c2c2;
 }
 
+.peopleMobile {
+  display: none;
+}
+
+.people {
+  display: block;
+}
+
 .sectionTitleDark {
   font-size: clamp(36px, 3.33333vw, 48px);
   font-weight: 700;
@@ -191,6 +199,14 @@
     margin-block: 24px;
   }
 
+  .peopleMobile {
+    display: block;
+  }
+
+  .people {
+    display: none;
+  }
+
   .formInputs {
     gap: 24px;
   }
@@ -210,7 +226,7 @@
   }
 
   .contactTop {
-    gap: 50px;
+    gap: 40px;
   }
 
   .contact {
@@ -228,6 +244,10 @@
   .contactTopTextsText,
   .contactTopTextsEmail {
     font-size: 16px;
+  }
+
+  .contactTop {
+    gap: 36px;
   }
 
   .contact {
