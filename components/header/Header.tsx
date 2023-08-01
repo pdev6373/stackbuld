@@ -41,6 +41,13 @@ export default function Header() {
         </div>
 
         <button className={styles.headerButton}>Contact us</button>
+        <Image
+          src={Images.menu}
+          width={36}
+          height={36}
+          alt="menu icon"
+          className={styles.menuOpen}
+        />
       </header>
     </div>
   );

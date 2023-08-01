@@ -58,9 +58,21 @@
   display: block;
 }
 
+.menuOpen {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .links {
     display: none;
+  }
+
+  .headerButton {
+    display: none;
+  }
+
+  .menuOpen {
+    display: block;
   }
 }
 

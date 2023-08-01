@@ -67,6 +67,7 @@ const Images = {
   howItWorksFour: require("../assets/images/how-it-works-4.png"),
   global: require("../assets/images/global.png"),
   monitor: require("../assets/images/monitor.png"),
+  menu: require("../assets/images/menu.svg"),
   mobile: require("../assets/images/mobile.png"),
   serviceOneIcon: require("../assets/images/service-1-icon.png"),
   serviceOneOne: require("../assets/images/service-1-1.png"),
