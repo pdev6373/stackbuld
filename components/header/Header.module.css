@@ -58,10 +58,8 @@
 .navMobileWrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
   flex-grow: 1;
-  padding-bottom: 100px;
   gap: 30px;
 }
 
@@ -113,12 +111,12 @@
     justify-content: space-between;
     align-items: flex-end;
     padding: 24px 24px 40px;
-    gap: 24px;
+    gap: 100px;
     position: fixed;
     left: -1000px;
     background: #161a1d;
     top: 0;
-    height: 100vh;
+    bottom: 0;
     width: 100%;
     z-index: 100;
     transition: left 0.3s ease-out;
@@ -147,12 +145,6 @@
 
   .logoFull {
     display: none;
-  }
-
-  .navMobileWrapper {
-    padding-bottom: 0;
-    justify-content: flex-start;
-    padding-top: 100px;
   }
 
   .linkMobile {
