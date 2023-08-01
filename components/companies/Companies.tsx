@@ -43,6 +43,23 @@ export default function Companies() {
               alt="achievement image"
               width={96}
               height={96}
+              className={styles.achievementIcon}
+            />
+
+            <Image
+              src={achievement.image}
+              alt="achievement image"
+              width={72}
+              height={72}
+              className={styles.achievementIconMobile}
+            />
+
+            <Image
+              src={achievement.image}
+              alt="achievement image"
+              width={48}
+              height={48}
+              className={styles.achievementIconMobile2}
             />
           </div>
         ))}

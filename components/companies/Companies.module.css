@@ -67,14 +67,14 @@
   color: #161a1d;
   font-size: 48px;
   font-weight: 700;
-  line-height: 58px;
+  line-height: 1.208;
 }
 
 .achievementText {
   color: #a3b2c2;
   font-size: 20px;
   font-weight: 600;
-  line-height: 29px;
+  line-height: 1.45;
 }
 
 .borderBlock {
@@ -85,6 +85,18 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.achievementIconMobile {
+  display: none;
+}
+
+.achievementIcon {
+  display: block;
+}
+
+.achievementIconMobile2 {
+  display: none;
 }
 
 @media (max-width: 1390px) {
@@ -115,6 +127,12 @@
   }
 }
 
+@media (max-width: 900px) {
+  .achievementTitle {
+    font-size: 36px;
+  }
+}
+
 @media (max-width: 700px) {
   .wrapper {
     padding: 60px 24px;
@@ -122,6 +140,18 @@
 
   .header {
     font-size: 24px;
+  }
+
+  .achievementText {
+    font-size: 18px;
+  }
+
+  .achievementIconMobile {
+    display: block;
+  }
+
+  .achievementIcon {
+    display: none;
   }
 }
 
@@ -134,7 +164,7 @@
 
 @media (max-width: 480px) {
   .achievementTitle {
-    font-size: 36px;
+    font-size: 30px;
   }
 
   .achievement {
@@ -150,11 +180,25 @@
   .image {
     min-height: 24px;
   }
+
+  .achievementText {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 410px) {
+  .achievementIconMobile2 {
+    display: block;
+  }
+
+  .achievementIconMobile {
+    display: none;
+  }
 }
 
 @media (max-width: 350px) {
   .imageWrapperOuter {
     width: 70%;
-    height: 90px;
+    height: 80px;
   }
 }

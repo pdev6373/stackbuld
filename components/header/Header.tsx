@@ -86,7 +86,12 @@ export default function Header({ type, invertButton }: HeaderType) {
         <div className={styles.navMobileWrapper}>
           {Navs.map((nav, index) =>
             nav.route ? (
-              <Link href={nav.route} className={styles.linkMobile} key={index}>
+              <Link
+                href={nav.route}
+                className={styles.linkMobile}
+                key={index}
+                onClick={() => setOpenSideNav(false)}
+              >
                 {nav.name}
               </Link>
             ) : (
