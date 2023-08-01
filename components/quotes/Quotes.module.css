@@ -169,6 +169,10 @@
   display: block;
 }
 
+.achievementIconMobile2 {
+  display: none;
+}
+
 @media (max-width: 1350px) {
   .achievements {
     padding: 0 24px;
@@ -305,6 +309,16 @@
 }
 
 @media (max-width: 410px) {
+  .achievementIconMobile2 {
+    display: block;
+  }
+
+  .achievementIconMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 370px) {
   .achievement {
     flex-direction: column-reverse;
     align-items: flex-start;

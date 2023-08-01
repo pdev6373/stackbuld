@@ -39,6 +39,14 @@ export default function Quotes() {
                 height={72}
                 className={styles.achievementIconMobile}
               />
+
+              <Image
+                src={achievement.image}
+                alt="achievement icon"
+                width={48}
+                height={48}
+                className={styles.achievementIconMobile2}
+              />
             </div>
           ))}
         </div>
