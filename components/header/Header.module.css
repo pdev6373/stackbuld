@@ -1,6 +1,5 @@
 .headerWrapper {
   padding-bottom: clamp(40px, 5.625vw, 81px);
-  background-color: #161a1d;
   position: sticky;
   top: 0;
   left: 0;

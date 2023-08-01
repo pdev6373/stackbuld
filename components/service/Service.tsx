@@ -42,7 +42,7 @@ export default function Service({ service }: ServiceType) {
       </div>
 
       <Link href={service.route} className={styles.button}>
-        <p>Learn more</p>
+        <p className={styles.buttonText}>Learn more</p>
         <Image
           src={Images.learnMore}
           alt="learn more icon"

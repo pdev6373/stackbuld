@@ -13,7 +13,6 @@ import { Images } from "@/constants";
 export default function Home() {
   return (
     <main>
-      <Header />
       <Hero
         title="Innovate and grow through advanced web solutions"
         type="home"

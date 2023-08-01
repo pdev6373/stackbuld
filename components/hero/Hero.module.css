@@ -1,6 +1,13 @@
 .heroWrapper {
   position: relative;
-  background-color: #161a1d;
+  /* background-color: #161a1d; */
+}
+
+.container {
+  background: url("../../assets/images/hero-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .heroImageWrapper {
