@@ -20,8 +20,8 @@ export default function Header() {
           <Image
             src={Images.logo}
             alt="logo"
-            width={33.5}
-            height={32}
+            width={44.667}
+            height={42.667}
             className={styles.logo}
           />
         </Link>
