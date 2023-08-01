@@ -52,6 +52,7 @@ export default function Quotes() {
         </div>
 
         <div className={styles.quotesDisplay}>
+          <div className={styles.displayOverlay}></div>
           <div className={styles.quotesHeader}>
             <p className={styles.quoteTitle}>
               “Quote from a satisfied customer that speaks good about our

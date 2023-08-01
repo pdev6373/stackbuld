@@ -67,6 +67,13 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 120px;
+  position: relative;
+}
+
+.displayOverlay {
+  position: absolute;
+  inset: 0;
+  background: #002828cc;
 }
 
 .quoteTitle {
@@ -80,6 +87,12 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.quotesHeader,
+.quotesBottom {
+  position: relative;
+  z-index: 1;
 }
 
 .quotesBottom {
