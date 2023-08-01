@@ -17,9 +17,18 @@ export default function Review() {
             alt="profile image"
             width={56}
             height={56}
+            className={styles.profileImage}
           />
 
-          <div>
+          <Image
+            src={Images.profile}
+            alt="profile image"
+            width={40}
+            height={40}
+            className={styles.profileImageMobile}
+          />
+
+          <div className={styles.reviewDetails}>
             <p className={styles.reviewName}>Firstname Lastname</p>
             <p className={styles.reviewRole}>Role, Company</p>
           </div>
