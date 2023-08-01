@@ -123,14 +123,14 @@
   color: #f6f7f9;
   font-size: 20px;
   font-weight: 600;
-  line-height: 29px;
+  line-height: 1.45;
 }
 
 .contactTopTextsEmail {
   color: #a3b2c2;
   font-size: 20px;
   font-weight: 500;
-  line-height: 29px;
+  line-height: 1.45;
 }
 
 .dot {
@@ -195,12 +195,26 @@
     gap: 24px;
   }
 
-  .formButton {
+  .formButton,
+  .contactTopTextsText,
+  .contactTopTextsEmail {
     font-size: 18px;
   }
 
   .contact {
     padding: 40px 24px 60px;
+  }
+
+  .formInputWrapper {
+    gap: 4px;
+  }
+
+  .contactTop {
+    gap: 50px;
+  }
+
+  .contact {
+    gap: 48px;
   }
 }
 
@@ -210,7 +224,13 @@
     font-size: 24px;
   }
 
-  .formButton {
+  .formButton,
+  .contactTopTextsText,
+  .contactTopTextsEmail {
     font-size: 16px;
+  }
+
+  .contact {
+    gap: 40px;
   }
 }
