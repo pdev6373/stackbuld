@@ -4,11 +4,10 @@ import { Images } from "@/constants";
 export default function page() {
   return (
     <main>
-      <Header type="process" />
       <Hero
         heroImage={Images.processBackground}
         title="Transforming Ideas into Digital Reality"
-        type="our-process"
+        type="process"
         titleStyles={{ maxWidth: "920px" }}
       />
       <HowWeWork />
