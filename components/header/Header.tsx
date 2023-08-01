@@ -1,10 +1,14 @@
+"use client";
 import styles from "./Header.module.css";
 import Image from "next/image";
 import { Images } from "@/constants";
 import { Navs } from "@/constants";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Header() {
+  const [openSideNav, setOpenSideNav] = useState(false);
+
   return (
     <div className={styles.headerWrapper}>
       <header className={styles.header}>
@@ -26,7 +30,7 @@ export default function Header() {
           />
         </Link>
 
-        <div className={styles.links}>
+        <nav className={styles.links}>
           {Navs.map((nav, index) =>
             nav.route ? (
               <Link href={nav.route} className={styles.link} key={index}>
@@ -38,7 +42,7 @@ export default function Header() {
               </p>
             )
           )}
-        </div>
+        </nav>
 
         <button className={styles.headerButton}>Contact us</button>
         <Image
@@ -47,8 +51,39 @@ export default function Header() {
           height={36}
           alt="menu icon"
           className={styles.menuOpen}
+          onClick={() => setOpenSideNav(true)}
         />
       </header>
+
+      <nav
+        className={`${styles.mobileNav} ${
+          openSideNav ? styles.mobileNavOpen : ""
+        }`}
+      >
+        <Image
+          src={Images.close}
+          width={36}
+          height={36}
+          alt="menu icon"
+          onClick={() => setOpenSideNav(false)}
+        />
+
+        <div className={styles.navMobileWrapper}>
+          {Navs.map((nav, index) =>
+            nav.route ? (
+              <Link href={nav.route} className={styles.linkMobile} key={index}>
+                {nav.name}
+              </Link>
+            ) : (
+              <p className={styles.linkMobile} key={index}>
+                {nav.name}
+              </p>
+            )
+          )}
+        </div>
+
+        <button className={styles.headerButtonMobile}>Contact us</button>
+      </nav>
     </div>
   );
 }

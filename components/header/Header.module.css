@@ -1,9 +1,9 @@
 .headerWrapper {
   padding-bottom: clamp(40px, 5.625vw, 81px);
-  position: sticky;
+  /* position: sticky;
   top: 0;
   left: 0;
-  right: 0;
+  right: 0; */
 }
 
 .header {
@@ -31,7 +31,8 @@
   opacity: 0.8;
 }
 
-.headerButton {
+.headerButton,
+.headerButtonMobile {
   color: #17c2c2;
   font-size: 16px;
   font-weight: 600;
@@ -44,7 +45,43 @@
   transition: color background-color 0.2s ease-out;
 }
 
-.headerButton:hover {
+.headerButtonMobile {
+  width: 100%;
+  font-size: 18px;
+}
+
+.mobileNav {
+  position: fixed;
+  left: -1000px;
+  background: #161a1d;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  transition: left 0.3s ease-out;
+}
+
+.mobileNavOpen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 24px;
+  left: 0;
+  gap: 24px;
+}
+
+.navMobileWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
+  margin-top: 20vh;
+  gap: 30px;
+}
+
+.headerButton:hover,
+.headerButtonMobile:hover {
   background-color: #17c2c2;
   color: #f6f7f9;
 }
@@ -55,6 +92,17 @@
 
 .logoFull {
   display: block;
+}
+
+.linkMobile {
+  padding: 24px;
+  text-align: center;
+  color: #a3b2c2;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 18.85px;
+  border: 1px solid #a3b2c2;
+  border-radius: 16px;
 }
 
 .menuOpen {
@@ -82,10 +130,6 @@
 
   .headerWrapper {
     padding-bottom: 0;
-  }
-
-  .headerButton {
-    font-size: 14px;
   }
 }
 
