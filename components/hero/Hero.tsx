@@ -8,10 +8,12 @@ export default function Hero({
   type,
   titleStyles,
   heroImage,
+  showImage = true,
+  invertButton = false,
 }: HeroType) {
   return (
     <div className={styles.container}>
-      <Header />
+      <Header type={type} invertButton={invertButton} />
       <section className={styles.heroWrapper}>
         <div className={styles.heroContent}>
           <h3 className={styles.heroTitle} style={titleStyles}>
@@ -31,7 +33,11 @@ export default function Hero({
           )}
         </div>
 
-        <div className={styles.heroImageWrapper}>
+        <div
+          className={`${styles.heroImageWrapper} ${
+            showImage ? "" : styles.invisble
+          }`}
+        >
           <Image src={heroImage} alt="logo" className={styles.heroImage} fill />
         </div>
       </section>

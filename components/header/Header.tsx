@@ -5,8 +5,9 @@ import { Images } from "@/constants";
 import { Navs } from "@/constants";
 import Link from "next/link";
 import { useState } from "react";
+import { HeaderType } from "@/types";
 
-export default function Header() {
+export default function Header({ type, invertButton }: HeaderType) {
   const [openSideNav, setOpenSideNav] = useState(false);
 
   return (
@@ -33,7 +34,15 @@ export default function Header() {
         <nav className={styles.links}>
           {Navs.map((nav, index) =>
             nav.route ? (
-              <Link href={nav.route} className={styles.link} key={index}>
+              <Link
+                href={nav.route}
+                className={`${styles.link} ${
+                  nav.name.toLowerCase().includes(type.toLowerCase())
+                    ? styles.linkActive
+                    : ""
+                }`}
+                key={index}
+              >
                 {nav.name}
               </Link>
             ) : (
@@ -44,7 +53,13 @@ export default function Header() {
           )}
         </nav>
 
-        <button className={styles.headerButton}>Contact us</button>
+        <button
+          className={`${styles.headerButton} ${
+            invertButton ? styles.headerButtonInvert : ""
+          }`}
+        >
+          Contact us
+        </button>
         <Image
           src={Images.menu}
           width={36}

@@ -48,11 +48,18 @@ export type ProjectType = {
   isHidden: "true" | "false";
 };
 
+export type HeaderType = {
+  type: "home" | "about" | "our-process" | "services";
+  invertButton?: boolean;
+};
+
 export type HeroType = {
   title: string;
   heroImage: string;
   type: "home" | "about" | "our-process" | "services";
   titleStyles?: object;
+  showImage?: boolean;
+  invertButton?: boolean;
 };
 
 export type AttributeType = {

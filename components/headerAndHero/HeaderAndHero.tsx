@@ -72,14 +72,16 @@ export default function HeaderAndHero({
         </section>
       </div>
 
-      <div className={styles.heroImageWrapper}>
-        <Image
-          src={heroImage}
-          alt="hero image"
-          className={styles.heroImage}
-          fill
-        />
-      </div>
+      {heroImage && (
+        <div className={styles.heroImageWrapper}>
+          <Image
+            src={heroImage}
+            alt="hero image"
+            className={styles.heroImage}
+            fill
+          />
+        </div>
+      )}
     </>
   );
 }

@@ -22,6 +22,10 @@
   height: unset !important;
 }
 
+.invisble {
+  opacity: 0;
+}
+
 .heroContent {
   position: absolute;
   font-size: clamp(40px, 5vw, 72px);

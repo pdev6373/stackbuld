@@ -77,6 +77,10 @@
   display: block;
 }
 
+.linkActive {
+  color: #f6f7f9;
+}
+
 .linkMobile {
   padding: 24px;
   text-align: center;
@@ -90,6 +94,16 @@
 
 .menuOpen {
   display: none;
+}
+
+.headerButtonInvert {
+  background-color: #17c2c2;
+  color: #f6f7f9;
+}
+
+.headerButtonInvert:hover {
+  background-color: transparent;
+  color: #17c2c2;
 }
 
 @media (max-width: 900px) {

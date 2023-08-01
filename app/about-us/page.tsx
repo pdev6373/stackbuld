@@ -2,6 +2,7 @@ import {
   Attributes,
   Companies,
   HeaderAndHero,
+  Hero,
   Industries,
   Video,
 } from "@/components";
@@ -11,10 +12,13 @@ import { Images } from "@/constants";
 export default function page() {
   return (
     <main>
-      <HeaderAndHero
-        heroImage={Images.heroBackground}
+      <Hero
         title="We transform businesses with technology"
         type="about"
+        heroImage={Images.heroImage}
+        showImage={false}
+        titleStyles={{ maxWidth: "935px" }}
+        invertButton={true}
       />
       <div className={styles.videoWrapper}>
         <Video />
