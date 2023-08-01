@@ -4,7 +4,7 @@ import { Images } from "@/constants";
 export default function page() {
   return (
     <main>
-      <Header />
+      <Header type="process" />
       <Hero
         heroImage={Images.processBackground}
         title="Transforming Ideas into Digital Reality"

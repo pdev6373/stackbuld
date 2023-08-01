@@ -49,14 +49,14 @@ export type ProjectType = {
 };
 
 export type HeaderType = {
-  type: "home" | "about" | "our-process" | "services";
+  type: "home" | "about" | "process" | "services";
   invertButton?: boolean;
 };
 
 export type HeroType = {
   title: string;
   heroImage: string;
-  type: "home" | "about" | "our-process" | "services";
+  type: "home" | "about" | "process" | "services";
   titleStyles?: object;
   showImage?: boolean;
   invertButton?: boolean;
