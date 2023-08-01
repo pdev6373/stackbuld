@@ -97,6 +97,10 @@
   .image {
     max-height: none;
   }
+
+  .wrapper {
+    gap: 36px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -114,6 +118,6 @@
   }
 
   .wrapper {
-    gap: 36px;
+    gap: 24px;
   }
 }
