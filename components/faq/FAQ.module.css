@@ -70,6 +70,7 @@
   background-size: cover;
   background-position: center;
   border-radius: 16px;
+  overflow: hidden;
   padding-block: 40px;
   padding-inline: 32px;
   display: flex;
