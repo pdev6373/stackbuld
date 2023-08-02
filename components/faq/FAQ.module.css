@@ -77,6 +77,7 @@
   flex-direction: column;
   cursor: pointer;
   background-blend-mode: darken;
+  border: none;
 }
 
 .questionWrapper {
@@ -134,6 +135,10 @@
 
   .faq {
     padding: 28px;
+  }
+
+  .questionWrapper {
+    gap: 20px;
   }
 }
 

@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   font-weight: 400;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,
@@ -39,8 +40,4 @@ textarea {
   font: inherit;
   outline: none;
   border: none;
-}
-
-:focus {
-  outline: none !important;
 }
