@@ -80,6 +80,11 @@
   border: none;
 }
 
+.faqOuter {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
 .questionWrapper {
   display: flex;
   justify-content: space-between;

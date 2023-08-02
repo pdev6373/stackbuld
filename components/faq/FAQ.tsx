@@ -21,28 +21,30 @@ export default function FAQ() {
 
       <div className={styles.faqs}>
         {FAQs.map((faq) => (
-          <div
-            key={faq.question}
-            className={`${styles.faq} ${
-              currentFAQ.question == faq.question && styles.faqCurrent
-            }`}
-            onClick={() => setCurrentFAQ(faq)}
-          >
-            <div className={styles.questionWrapper}>
-              <h2 className={styles.question}>{faq.question}</h2>
-              <Image
-                src={Images.expand}
-                alt="faq icon"
-                width={24}
-                height={24}
-                className={
-                  faq.question === currentFAQ.question
-                    ? styles.faqIcon
-                    : styles.faqIconCurrent
-                }
-              />
+          <div className={styles.faqOuter}>
+            <div
+              key={faq.question}
+              className={`${styles.faq} ${
+                currentFAQ.question == faq.question && styles.faqCurrent
+              }`}
+              onClick={() => setCurrentFAQ(faq)}
+            >
+              <div className={styles.questionWrapper}>
+                <h2 className={styles.question}>{faq.question}</h2>
+                <Image
+                  src={Images.expand}
+                  alt="faq icon"
+                  width={24}
+                  height={24}
+                  className={
+                    faq.question === currentFAQ.question
+                      ? styles.faqIcon
+                      : styles.faqIconCurrent
+                  }
+                />
+              </div>
+              <p className={styles.answer}>{faq.answer}</p>
             </div>
-            <p className={styles.answer}>{faq.answer}</p>
           </div>
         ))}
       </div>
