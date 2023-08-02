@@ -1,4 +1,4 @@
-import { Contact, FAQ, Header, Hero, HowWeWork } from "@/components";
+import { Contact, FAQ, Hero, HowWeWork } from "@/components";
 import { Images } from "@/constants";
 
 export default function page() {
@@ -9,6 +9,7 @@ export default function page() {
         title="Transforming Ideas into Digital Reality"
         type="process"
         titleStyles={{ maxWidth: "920px" }}
+        imageStyles={{ paddingTop: "120px" }}
       />
       <HowWeWork />
       <FAQ />

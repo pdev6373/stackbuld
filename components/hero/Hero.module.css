@@ -1,6 +1,5 @@
 .heroWrapper {
   position: relative;
-  /* background-color: #161a1d; */
 }
 
 .container {
@@ -16,7 +15,7 @@
 }
 
 .heroImage {
-  object-fit: contain;
+  object-fit: cover;
   width: 100% !important;
   position: relative !important;
   height: unset !important;

@@ -1,8 +1,24 @@
+"use client";
+import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./HowWeWork.module.css";
 import { HowWeWork as HowWeWorkConstant, Images } from "@/constants";
 
 export default function HowWeWork() {
+  const mainRef = useRef<any>();
+  const [showSteps, setShowSteps] = useState(false);
+
+  const getVerticalCoordinates = () => {
+    const coordinates = mainRef.current.getBoundingClientRect();
+    if (coordinates.y <= 25) setShowSteps(true);
+    else setShowSteps(false);
+    if (coordinates.bottom <= 300) setShowSteps(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", getVerticalCoordinates);
+  }, []);
+
   return (
     <section className={styles.wrapper}>
       <div className={styles.header}>
@@ -14,47 +30,49 @@ export default function HowWeWork() {
         </p>
       </div>
 
-      <div className={styles.mainWrapper}>
-        <div className={styles.steps}>
-          <div className={styles.line}></div>
-          <div className={styles.stepWrapper}>
-            <Image
-              src={Images.selected}
-              alt="selected"
-              width={16}
-              height={16}
-            />
-            <p>Research</p>
-          </div>
+      <div className={styles.mainWrapper} ref={mainRef}>
+        <div className={`${styles.steps} ${showSteps ? styles.stepsShow : ""}`}>
+          <div className={styles.stepsInner}>
+            <div className={styles.line}></div>
+            <div className={styles.stepWrapper}>
+              <Image
+                src={Images.selected}
+                alt="selected"
+                width={16}
+                height={16}
+              />
+              <p>Research</p>
+            </div>
 
-          <div className={styles.stepWrapper}>
-            <Image
-              src={Images.unselected}
-              alt="selected"
-              width={16}
-              height={16}
-            />
-            <p>Design</p>
-          </div>
+            <div className={styles.stepWrapper}>
+              <Image
+                src={Images.unselected}
+                alt="selected"
+                width={16}
+                height={16}
+              />
+              <p>Design</p>
+            </div>
 
-          <div className={styles.stepWrapper}>
-            <Image
-              src={Images.unselected}
-              alt="selected"
-              width={16}
-              height={16}
-            />
-            <p>Develop</p>
-          </div>
+            <div className={styles.stepWrapper}>
+              <Image
+                src={Images.unselected}
+                alt="selected"
+                width={16}
+                height={16}
+              />
+              <p>Develop</p>
+            </div>
 
-          <div className={styles.stepWrapper}>
-            <Image
-              src={Images.unselected}
-              alt="selected"
-              width={16}
-              height={16}
-            />
-            <p>Support</p>
+            <div className={styles.stepWrapper}>
+              <Image
+                src={Images.unselected}
+                alt="selected"
+                width={16}
+                height={16}
+              />
+              <p>Support</p>
+            </div>
           </div>
         </div>
 

@@ -60,6 +60,7 @@ export type HeroType = {
   titleStyles?: object;
   showImage?: boolean;
   invertButton?: boolean;
+  imageStyles?: object;
 };
 
 export type AttributeType = {

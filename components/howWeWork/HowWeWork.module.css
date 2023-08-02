@@ -1,6 +1,6 @@
 .wrapper {
   background: #ffffff;
-  padding-block: 164px;
+  padding-block: clamp(100px, 11.3889vw, 164px);
   padding-inline: clamp(40px, 5.555555vw, 80px);
   display: flex;
   flex-direction: column;
@@ -40,14 +40,14 @@
 }
 
 .headerText {
-  font-size: 48px;
+  font-size: clamp(36px, 3.33333vw, 48px);
   font-weight: 700;
   line-height: 1.208;
   color: #161a1d;
 }
 
 .processSection {
-  max-width: 786px;
+  max-width: 850px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -57,7 +57,7 @@
   color: #4b5e71;
   font-size: 20px;
   font-weight: 500;
-  line-height: 29px;
+  line-height: 1.45;
 }
 
 .allProcesses {
@@ -66,6 +66,8 @@
   display: flex;
   flex-direction: column;
   gap: 160px;
+  width: calc(100% - 110px - 10%);
+  margin-left: auto;
 }
 
 .process {
@@ -75,12 +77,23 @@
 }
 
 .steps {
+  position: fixed;
+  top: 60px;
+  opacity: 0;
+  transform: translateY(-400px);
+  width: 110px;
+}
+
+.stepsShow {
+  transition: opacity 500ms, transform 400ms;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.stepsInner {
   display: flex;
   flex-direction: column;
   gap: 57px;
-  position: relative;
-  position: sticky;
-  top: 0;
 }
 
 .line {
@@ -104,16 +117,14 @@
 
 .mainWrapper {
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
-  gap: 60px;
 }
 
 .processTitle {
   color: #161a1d;
   font-size: 20px;
   font-weight: 600;
-  line-height: 29px;
+  line-height: 1.45;
 }
 
 .processList {
@@ -138,7 +149,7 @@
   color: #4b5e71;
   font-size: 20px;
   font-weight: 500;
-  line-height: 29px;
+  line-height: 1.45;
 }
 
 .toolsWrapper {
@@ -148,7 +159,8 @@
   padding: 16px;
   border-radius: 16px;
   background: #f0f8ff;
-  max-width: 786px;
+  max-width: 850px;
+  flex-wrap: wrap;
 }
 
 .tools {
@@ -162,7 +174,7 @@
   color: #4b5e71;
   font-size: 16px;
   font-weight: 500;
-  line-height: 19px;
+  line-height: 1.1875;
 }
 
 .processImageWrapper {
@@ -181,24 +193,32 @@
     padding: 0;
   }
 
-  .headerText {
-    font-size: 40px;
+  .process {
+    gap: 20px;
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
   .steps {
     display: none;
+  }
+
+  .allProcesses {
+    width: 100%;
+  }
+
+  .wrapper {
+    gap: 60px;
+  }
+
+  .allProcesses {
+    gap: 100px;
   }
 }
 
 @media (max-width: 700px) {
   .wrapper {
-    padding: 40px 24px 60px;
-  }
-
-  .headerText {
-    font-size: 36px;
+    padding: 60px 24px;
   }
 
   .sectionTitle {
@@ -206,28 +226,63 @@
   }
 
   .sectionTitle,
-  .sectionBody {
+  .sectionBody,
+  .headerText {
     font-size: 30px;
+  }
+
+  .headerBodyText {
+    font-size: 18px;
+  }
+
+  .process {
+    gap: 18px;
+  }
+
+  .processTitle,
+  .processItemText {
+    font-size: 18px;
+  }
+
+  .allProcesses {
+    gap: 80px;
   }
 }
 
 @media (max-width: 480px) {
   .sectionTitle,
-  .sectionBody {
+  .sectionBody,
+  .headerText {
     font-size: 24px;
   }
 
-  .headerText {
-    font-size: 30px;
+  .headerBodyText {
+    font-size: 16px;
+  }
+
+  .process {
+    gap: 16px;
+  }
+
+  .wrapper {
+    gap: 40px;
+  }
+
+  .allProcesses {
+    gap: 60px;
+  }
+
+  .toolsWrapper {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .tool {
+    font-size: 14px;
   }
 }
 
 @media (max-width: 380px) {
-  .toolsWrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .processListGrid {
     display: flex;
     flex-direction: column;

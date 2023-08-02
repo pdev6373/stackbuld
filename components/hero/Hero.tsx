@@ -10,6 +10,7 @@ export default function Hero({
   heroImage,
   showImage = true,
   invertButton = false,
+  imageStyles,
 }: HeroType) {
   return (
     <div className={styles.container}>
@@ -37,6 +38,7 @@ export default function Hero({
           className={`${styles.heroImageWrapper} ${
             showImage ? "" : styles.invisble
           }`}
+          style={imageStyles ? imageStyles : {}}
         >
           <Image src={heroImage} alt="logo" className={styles.heroImage} fill />
         </div>
