@@ -80,13 +80,31 @@
   position: fixed;
   top: 60px;
   opacity: 0;
-  transform: translateY(-400px);
+  transform: translateX(-400px);
   width: 110px;
+  transition: opacity 500ms, transform 200ms;
+}
+
+.lineInner {
+  height: 0;
+  background: #0085ff;
+  transition: height 0.5s;
+}
+
+.lineInner1 {
+  height: calc(100% / 3);
+}
+
+.lineInner2 {
+  height: calc(100% / 3 * 2);
+}
+
+.lineInner3 {
+  height: 100%;
 }
 
 .stepsShow {
-  transition: opacity 500ms, transform 400ms;
-  transform: translateY(0);
+  transform: translateX(0);
   opacity: 1;
 }
 

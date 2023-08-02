@@ -6,18 +6,45 @@ import { HowWeWork as HowWeWorkConstant, Images } from "@/constants";
 
 export default function HowWeWork() {
   const mainRef = useRef<any>();
+  const designRef = useRef<any>();
+  const developRef = useRef<any>();
+  const supportRef = useRef<any>();
+
   const [showSteps, setShowSteps] = useState(false);
+  const [isDesignShown, setIsDesignShown] = useState(false);
+  const [isDevelopedShown, setIsDevelopedShown] = useState(false);
+  const [isSupportShown, setIsSupportShown] = useState(false);
 
   const getVerticalCoordinates = () => {
-    const coordinates = mainRef.current.getBoundingClientRect();
-    if (coordinates.y <= 25) setShowSteps(true);
+    const mainCoordinates = mainRef.current.getBoundingClientRect();
+    const designCoordinates = designRef.current.getBoundingClientRect();
+    const developCoordinates = developRef.current.getBoundingClientRect();
+    const supportCoordinates = supportRef.current.getBoundingClientRect();
+
+    if (mainCoordinates.y <= 40) setShowSteps(true);
     else setShowSteps(false);
-    if (coordinates.bottom <= 300) setShowSteps(false);
+    if (mainCoordinates.bottom <= 300) setShowSteps(false);
+
+    if (designCoordinates.y <= 200) setIsDesignShown(true);
+    else setIsDesignShown(false);
+
+    if (developCoordinates.y <= 200) setIsDevelopedShown(true);
+    else setIsDevelopedShown(false);
+
+    if (supportCoordinates.y <= 200) setIsSupportShown(true);
+    else setIsSupportShown(false);
   };
 
   useEffect(() => {
     window.addEventListener("scroll", getVerticalCoordinates);
   }, []);
+
+  const handleImageToDisplay = (condition: boolean) =>
+    condition ? (
+      <Image src={Images.selected} alt="selected" width={16} height={16} />
+    ) : (
+      <Image src={Images.unselected} alt="selected" width={16} height={16} />
+    );
 
   return (
     <section className={styles.wrapper}>
@@ -33,7 +60,15 @@ export default function HowWeWork() {
       <div className={styles.mainWrapper} ref={mainRef}>
         <div className={`${styles.steps} ${showSteps ? styles.stepsShow : ""}`}>
           <div className={styles.stepsInner}>
-            <div className={styles.line}></div>
+            <div className={styles.line}>
+              <div
+                className={`${styles.lineInner} ${
+                  isDesignShown && styles.lineInner1
+                } ${isDevelopedShown && styles.lineInner2} ${
+                  isSupportShown && styles.lineInner3
+                }`}
+              ></div>
+            </div>
             <div className={styles.stepWrapper}>
               <Image
                 src={Images.selected}
@@ -45,32 +80,17 @@ export default function HowWeWork() {
             </div>
 
             <div className={styles.stepWrapper}>
-              <Image
-                src={Images.unselected}
-                alt="selected"
-                width={16}
-                height={16}
-              />
+              {handleImageToDisplay(isDesignShown)}
               <p>Design</p>
             </div>
 
             <div className={styles.stepWrapper}>
-              <Image
-                src={Images.unselected}
-                alt="selected"
-                width={16}
-                height={16}
-              />
+              {handleImageToDisplay(isDevelopedShown)}
               <p>Develop</p>
             </div>
 
             <div className={styles.stepWrapper}>
-              <Image
-                src={Images.unselected}
-                alt="selected"
-                width={16}
-                height={16}
-              />
+              {handleImageToDisplay(isSupportShown)}
               <p>Support</p>
             </div>
           </div>
@@ -78,7 +98,19 @@ export default function HowWeWork() {
 
         <div className={styles.allProcesses}>
           {HowWeWorkConstant.map((item, index) => (
-            <div className={styles.process} key={index}>
+            <div
+              className={styles.process}
+              key={index}
+              ref={
+                item.heading.toLowerCase().includes("design")
+                  ? designRef
+                  : item.heading.toLowerCase().includes("develop")
+                  ? developRef
+                  : item.heading.toLowerCase().includes("support")
+                  ? supportRef
+                  : null
+              }
+            >
               <div className={styles.headerTexts}>
                 <p className={styles.headerText}>{index + 1}.</p>
                 <h3 className={styles.headerText}>{item.heading}</h3>
