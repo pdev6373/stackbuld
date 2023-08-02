@@ -297,6 +297,14 @@
   .processListGrid {
     row-gap: 4px;
   }
+
+  .headerTexts {
+    order: -2;
+  }
+
+  .processImageWrapper {
+    order: -1;
+  }
 }
 
 @media (max-width: 380px) {
