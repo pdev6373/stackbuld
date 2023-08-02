@@ -21,9 +21,8 @@ export default function FAQ() {
 
       <div className={styles.faqs}>
         {FAQs.map((faq) => (
-          <div className={styles.faqOuter}>
+          <div className={styles.faqOuter} key={faq.question}>
             <div
-              key={faq.question}
               className={`${styles.faq} ${
                 currentFAQ.question == faq.question && styles.faqCurrent
               }`}
