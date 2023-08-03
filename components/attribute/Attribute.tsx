@@ -24,7 +24,7 @@ export default function Attribute({
       <div className={styles.texts}>
         <h3 className={styles.title}>
           {headerTitle} <span className={styles.titleInner}>{header}</span>
-          <span className={styles.dot}>.</span>
+          <span className={`${styles.title} ${styles.dot}`}>.</span>
         </h3>
         <p className={styles.text}>{text1}</p>
         <p className={styles.text}>{text2}</p>

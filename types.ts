@@ -1,3 +1,12 @@
+type ServiceRoutesType =
+  | "/maintenance"
+  | "/startup-solutions"
+  | "/outsourcing"
+  | "/ai-and-ml"
+  | "/blockchain"
+  | "/product-design"
+  | "/software-development";
+
 export type ServicesType = {
   backgroundColor: string;
   title: string;
@@ -5,12 +14,19 @@ export type ServicesType = {
   icon: string;
   iconBig: string;
   dotColor: string;
-  route: string;
+  route: ServiceRoutesType;
+};
+
+type NavLinkType = {
+  icon: string;
+  text: string;
+  route: ServiceRoutesType;
 };
 
 export type NavsType = {
   name: string;
   route?: string;
+  links?: NavLinkType[];
 };
 
 export type FooterType = {
@@ -35,6 +51,14 @@ export type FormFieldType = {
   value: string;
   isRequired: boolean;
   type: string;
+  name: "fullname" | "email" | "companyName" | "phoneNumber";
+};
+
+export type FormValueType = {
+  fullname: string;
+  email: string;
+  companyName: string;
+  phoneNumber: string;
 };
 
 export type ProjectType = {
@@ -55,12 +79,16 @@ export type HeaderType = {
 
 export type HeroType = {
   title: string;
+  content?: string;
   heroImage: string;
   type: "home" | "about" | "process" | "services";
   titleStyles?: object;
   showImage?: boolean;
   invertButton?: boolean;
   imageStyles?: object;
+  serviceTitleBackground?: string;
+  serviceTitleColor?: string;
+  serviceTitleText?: string;
 };
 
 export type AttributeType = {
@@ -92,19 +120,25 @@ export type HowItWorksType = {
   tools: string[];
 };
 
-type ServicePageContent = {
+export type ServicePageContent = {
   topIcon: string;
   title: string;
   text1: string;
   text2: string;
   image: string;
-
   tools: string[];
 };
 
 export type ServicePageType = {
+  route: ServiceRoutesType;
   bottomIcon: string;
   bottomBackground: string;
+  heroTopTitle: string;
+  bodyTitle: string;
+  heroTitle: string;
+  heroImage: string;
+  heroBackground: string;
+  heroColor: string;
   content: ServicePageContent[];
 };
 

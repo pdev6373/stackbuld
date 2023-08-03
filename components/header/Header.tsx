@@ -23,15 +23,48 @@ export default function Header({ type, invertButton }: HeaderType) {
           />
 
           <Image
-            src={Images.logo}
+            src={Images.logoFull}
             alt="logo"
-            width={44.667}
-            height={42.667}
+            width={142.89}
+            height={32}
             className={styles.logo}
           />
         </Link>
 
         <nav className={styles.links}>
+          <div className={styles.servicesNavWrapperOuter}>
+            <div className={styles.servicesNavWrapper}>
+              <h3 className={styles.servicesNavHeader}>
+                Services we offer<span className={styles.dot}>.</span>
+              </h3>
+
+              <div className={styles.servicesNav}>
+                {Navs.find((nav) => nav.name === "Services")!.links?.map(
+                  (nav) => (
+                    <Link href={nav.route} className={styles.servicesLink}>
+                      <div className={styles.servicesLinkInner}>
+                        <Image
+                          alt="nav image"
+                          src={nav.icon}
+                          width={20}
+                          height={20}
+                        />
+                        <p className={styles.serviceLinkText}>{nav.text}</p>
+                        <Image
+                          src={Images.learnMore}
+                          alt="nav icon"
+                          width={20}
+                          height={20}
+                          className={styles.servicesLinkArrow}
+                        />
+                      </div>
+                    </Link>
+                  )
+                )}
+              </div>
+            </div>
+          </div>
+
           {Navs.map((nav, index) =>
             nav.route ? (
               <Link
@@ -46,7 +79,7 @@ export default function Header({ type, invertButton }: HeaderType) {
                 {nav.name}
               </Link>
             ) : (
-              <p className={styles.link} key={index}>
+              <p className={`${styles.link} ${styles.linkMulti}`} key={index}>
                 {nav.name}
               </p>
             )
@@ -62,8 +95,8 @@ export default function Header({ type, invertButton }: HeaderType) {
         </button>
         <Image
           src={Images.menu}
-          width={36}
-          height={36}
+          width={40}
+          height={40}
           alt="menu icon"
           className={styles.menuOpen}
           onClick={() => setOpenSideNav(true)}
@@ -75,24 +108,59 @@ export default function Header({ type, invertButton }: HeaderType) {
           openSideNav ? styles.mobileNavOpen : ""
         }`}
       >
-        <Image
-          src={Images.close}
-          width={36}
-          height={36}
-          alt="menu icon"
-          onClick={() => setOpenSideNav(false)}
-        />
+        <div className={styles.mobileTop}>
+          <Link href="/">
+            <Image
+              src={Images.logoFull}
+              alt="logo"
+              width={142.89}
+              height={32}
+              className={styles.logo}
+            />
+          </Link>
+
+          <Image
+            src={Images.close}
+            width={40}
+            height={40}
+            alt="menu icon"
+            onClick={() => setOpenSideNav(false)}
+          />
+        </div>
 
         <div className={styles.navMobileWrapper}>
           {Navs.map((nav, index) =>
-            nav.route ? (
+            nav.links?.length ? (
+              <div>
+                <h2 className={styles.mobileServiceHeader}>Services</h2>
+                <div className={styles.innerNavs}>
+                  {nav.links.map((link) => (
+                    <Link
+                      href={link.route}
+                      className={styles.linkMobile}
+                      key={index}
+                      onClick={() => setOpenSideNav(false)}
+                    >
+                      <Image
+                        alt="icon"
+                        src={Images.right}
+                        width={19}
+                        height={19}
+                      />
+                      <p className={styles.linkMobileText}>{link.text}</p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : nav.route ? (
               <Link
                 href={nav.route}
                 className={styles.linkMobile}
                 key={index}
                 onClick={() => setOpenSideNav(false)}
               >
-                {nav.name}
+                <Image alt="icon" src={Images.right} width={19} height={19} />
+                <p className={styles.linkMobileText}>{nav.name}</p>
               </Link>
             ) : (
               <p className={styles.linkMobile} key={index}>

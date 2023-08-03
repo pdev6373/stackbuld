@@ -160,6 +160,12 @@
   }
 }
 
+@media (max-width: 480px) {
+  .footer {
+    padding-inline: 20px;
+  }
+}
+
 @media (max-width: 380px) {
   .footerNavsWrapper {
     flex-direction: column;

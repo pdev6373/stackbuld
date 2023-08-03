@@ -10,6 +10,7 @@ export default function page() {
         type="process"
         titleStyles={{ maxWidth: "920px" }}
         imageStyles={{ paddingTop: "120px" }}
+        content="We harness the boundless power of technology and innovation and elevate your business performance. Your Vision brought to life by Our Expertise."
       />
       <HowWeWork />
       <FAQ />

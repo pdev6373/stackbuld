@@ -7,10 +7,6 @@
   gap: 80px;
 }
 
-.dot {
-  color: #17c2c2;
-}
-
 .sectionTitle {
   color: #161a1d;
   font-size: clamp(36px, 3.33333vw, 48px);
@@ -206,6 +202,10 @@
   height: unset !important;
 }
 
+.dot {
+  color: #17c2c2;
+}
+
 @media (max-width: 1100px) {
   .allProcesses {
     padding: 0;
@@ -322,6 +322,10 @@
 
   .processImageWrapper {
     order: -1;
+  }
+
+  .wrapper {
+    padding-inline: 20px;
   }
 }
 

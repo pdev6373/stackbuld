@@ -10,4 +10,3 @@ export { default as FAQs } from "./FAQs";
 export { default as HowWeWork } from "./HowWeWork";
 export { default as Why } from "./Why";
 export { default as ServiceFeatures } from "./ServiceFeatures";
-export { default as ServicesHero } from "./ServicesHero";

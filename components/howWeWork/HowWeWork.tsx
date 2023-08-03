@@ -50,7 +50,8 @@ export default function HowWeWork() {
     <section className={styles.wrapper}>
       <div className={styles.header}>
         <h3 className={styles.sectionTitle}>
-          How we work<span className={styles.dot}>.</span>
+          How we work
+          <span className={`${styles.sectionTitle} ${styles.dot}`}>.</span>
         </h3>
         <p className={styles.sectionBody}>
           The steps we take to help you achieve your goals.

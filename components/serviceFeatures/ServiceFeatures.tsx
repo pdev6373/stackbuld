@@ -1,10 +1,15 @@
 import { Images, ServiceFeatures as ServiceConstant } from "@/constants";
 import Image from "next/image";
 import styles from "./ServiceFeatures.module.css";
+import { ServicePageType } from "@/types";
 
-export default function ServiceFeatures() {
-  const serviceFeatures = ServiceConstant[0];
+type ServiceFeaturesType = {
+  serviceFeatures: ServicePageType;
+};
 
+export default function ServiceFeatures({
+  serviceFeatures,
+}: ServiceFeaturesType) {
   return (
     <section className={styles.container}>
       <div className={styles.steps}>

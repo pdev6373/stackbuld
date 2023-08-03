@@ -93,6 +93,7 @@
   align-items: center;
   gap: 8px;
   width: 100%;
+  cursor: pointer;
 }
 
 .attachmentText {
@@ -111,6 +112,18 @@
   padding: 1.1em;
   border-radius: 16px;
   width: 100%;
+  transition: opacity 0.15s ease-in;
+}
+
+.error {
+  margin-bottom: -16px;
+  color: brown;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.formButton:hover {
+  opacity: 0.8;
 }
 
 .contactTopTexts {
@@ -133,10 +146,6 @@
   line-height: 1.45;
 }
 
-.dot {
-  color: #17c2c2;
-}
-
 .peopleMobile {
   display: none;
 }
@@ -152,6 +161,10 @@
   margin-bottom: 4px;
   max-width: 632px;
   color: #f6f7f9;
+}
+
+.dot {
+  color: #17c2c2;
 }
 
 .sectionBodyDark {
@@ -252,5 +265,10 @@
 
   .contact {
     gap: 40px;
+    padding-inline: 20px;
+  }
+
+  .error {
+    font-size: 14px;
   }
 }

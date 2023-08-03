@@ -1,11 +1,4 @@
-import {
-  Attributes,
-  Companies,
-  HeaderAndHero,
-  Hero,
-  Industries,
-  Video,
-} from "@/components";
+import { Attributes, Companies, Hero, Industries, Video } from "@/components";
 import styles from "./page.module.css";
 import { Images } from "@/constants";
 

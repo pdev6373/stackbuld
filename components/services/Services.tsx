@@ -8,7 +8,8 @@ export default function Services() {
     <section className={styles.services}>
       <div className={styles.servicesHeader}>
         <h3 className={styles.sectionTitle}>
-          Services we offer<span className={styles.dot}>.</span>
+          Services we offer
+          <span className={`${styles.sectionTitle} ${styles.dot}`}>.</span>
         </h3>
         <p className={styles.sectionBody}>
           End-to-end solutions for your business

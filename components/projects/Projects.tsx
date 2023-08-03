@@ -91,7 +91,8 @@ export default function Projects() {
       <div className={styles.projectsHeader}>
         <div className={styles.projectsHeaderTexts}>
           <h3 className={styles.sectionTitle}>
-            Featured Projects<span className={styles.dot}>.</span>
+            Featured Projects
+            <span className={`${styles.sectionTitle} ${styles.dot}`}>.</span>
           </h3>
           <p className={styles.sectionBody}>
             The work we have done & the people we have helped

@@ -118,10 +118,6 @@
   line-height: 29px;
 }
 
-.dot {
-  color: #17c2c2;
-}
-
 .sectionTitleDark {
   font-size: clamp(36px, 3.33333vw, 48px);
   font-weight: 700;
@@ -136,6 +132,10 @@
   font-weight: 700;
   line-height: 1.208;
   color: #4b5e71;
+}
+
+.dot {
+  color: #17c2c2;
 }
 
 @media (max-width: 1100px) {
@@ -211,5 +211,9 @@
 
   .industryDetails {
     gap: 12px;
+  }
+
+  .industries {
+    padding-inline: 20px;
   }
 }

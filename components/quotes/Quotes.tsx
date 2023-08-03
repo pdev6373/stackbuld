@@ -7,7 +7,7 @@ export default function Quotes() {
     <section className={styles.quotes}>
       <h3 className={styles.sectionTitleDark}>
         Just don’t take our word for it, hear from others
-        <span className={styles.dot}>.</span>
+        <span className={`${styles.sectionTitleDark} ${styles.dot}`}>.</span>
       </h3>
 
       <div className={styles.quotesWrapper}>

@@ -11,10 +11,6 @@
   max-width: 632px;
 }
 
-.dot {
-  color: #17c2c2;
-}
-
 .sectionTitleDark {
   font-size: clamp(36px, 3.33333vw, 48px);
   font-weight: 700;
@@ -22,6 +18,10 @@
   margin-bottom: 4px;
   max-width: 632px;
   color: #f6f7f9;
+}
+
+.dot {
+  color: #17c2c2;
 }
 
 .sectionBodyDark {
@@ -41,7 +41,7 @@
 .answer {
   height: 0;
   overflow: hidden;
-  transition: 0.2s ease-in;
+  transition: 0.7s ease-in;
   opacity: 0;
   position: relative;
   color: #a3b2c2;
@@ -94,7 +94,7 @@
 
 .faqIcon {
   transform: rotate(0);
-  transition: transform 0.2s ease-in;
+  transition: transform 0.7s ease-in;
 }
 
 .faqIconCurrent {
@@ -159,5 +159,9 @@
 
   .faqCurrent .answer {
     margin-top: 12px;
+  }
+
+  .wrapper {
+    padding-inline: 20px;
   }
 }

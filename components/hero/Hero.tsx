@@ -11,22 +11,34 @@ export default function Hero({
   showImage = true,
   invertButton = false,
   imageStyles,
+  content,
+  serviceTitleBackground,
+  serviceTitleColor,
+  serviceTitleText,
 }: HeroType) {
   return (
     <div className={styles.container}>
       <Header type={type} invertButton={invertButton} />
       <section className={styles.heroWrapper}>
         <div className={styles.heroContent}>
+          {type === "services" && (
+            <p
+              className={styles.serviceType}
+              style={{
+                background: serviceTitleBackground,
+                color: serviceTitleColor,
+              }}
+            >
+              {serviceTitleText}
+            </p>
+          )}
           <h3 className={styles.heroTitle} style={titleStyles}>
             {title}
             <span className={styles.dot}>.</span>
           </h3>
 
-          {type !== "about" && (
-            <p className={styles.heroBody}>
-              Harness the power of scalable software solutions to elevate your
-              business performance and profitability.
-            </p>
+          {type !== "about" && type !== "services" && (
+            <p className={styles.heroBody}>{content}</p>
           )}
 
           {type !== "about" && (

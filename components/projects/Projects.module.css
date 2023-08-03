@@ -131,10 +131,6 @@
   line-height: 1.4375;
 }
 
-.dot {
-  color: #17c2c2;
-}
-
 .sectionTitle {
   color: #161a1d;
   font-size: clamp(36px, 3.33333vw, 48px);
@@ -149,6 +145,10 @@
   font-size: clamp(36px, 3.33333vw, 48px);
   font-weight: 700;
   line-height: 1.208;
+}
+
+.dot {
+  color: #17c2c2;
 }
 
 @media (min-width: 700px) {
@@ -212,6 +212,7 @@
 
   .projects {
     gap: 32px;
+    padding-inline: 20px;
   }
 
   .projectsHeader {

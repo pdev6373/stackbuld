@@ -13,7 +13,7 @@ const Services: ServicesType[] = [
     icon: Images.serviceOne,
     iconBig: Images.serviceOneBig,
     dotColor: "#B25BF6",
-    route: "/custom-software-development",
+    route: "/software-development",
   },
 
   {
@@ -27,7 +27,7 @@ const Services: ServicesType[] = [
     icon: Images.serviceTwo,
     iconBig: Images.serviceTwoBig,
     dotColor: "#FBB939",
-    route: "/blockchain-development",
+    route: "/blockchain",
   },
 
   {
@@ -41,7 +41,7 @@ const Services: ServicesType[] = [
     icon: Images.serviceThree,
     iconBig: Images.serviceThreeBig,
     dotColor: "#F6655B",
-    route: "/user-research-and-product-design",
+    route: "/product-design",
   },
 
   {
@@ -55,7 +55,7 @@ const Services: ServicesType[] = [
     icon: Images.serviceFour,
     iconBig: Images.serviceFourBig,
     dotColor: "#4B5E71",
-    route: "/ai-and-machine-learning-development",
+    route: "/ai-and-ml",
   },
 
   {
@@ -69,7 +69,7 @@ const Services: ServicesType[] = [
     icon: Images.serviceFive,
     iconBig: Images.serviceFiveBig,
     dotColor: "#5B87F6",
-    route: "/outsourcing-and-recruitment-services",
+    route: "/outsourcing",
   },
 
   {
@@ -83,7 +83,7 @@ const Services: ServicesType[] = [
     icon: Images.serviceSix,
     iconBig: Images.serviceSixBig,
     dotColor: "#05C948",
-    route: "/software-maintenance-and-support",
+    route: "/maintenance",
   },
 
   {
@@ -97,7 +97,7 @@ const Services: ServicesType[] = [
     icon: Images.serviceSeven,
     iconBig: Images.serviceSevenBig,
     dotColor: "#39AAFB",
-    route: "/startup-and-small-business-solutions",
+    route: "/startup-solutions",
   },
 ];
 

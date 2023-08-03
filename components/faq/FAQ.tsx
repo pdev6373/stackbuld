@@ -12,7 +12,8 @@ export default function FAQ() {
     <section className={styles.wrapper}>
       <div className={styles.faqHeader}>
         <h3 className={styles.sectionTitleDark}>
-          Key industries<span className={styles.dot}>.</span>
+          Key industries
+          <span className={`${styles.sectionTitleDark} ${styles.dot}`}>.</span>
         </h3>
         <p className={styles.sectionBodyDark}>
           Domains we have mastered and conquered

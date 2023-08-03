@@ -11,17 +11,17 @@ const Footer: FooterType[] = [
 
       {
         name: "Our process",
-        route: "/our-procress",
+        route: "/our-process",
       },
 
       {
         name: "Privacy Policy",
-        route: "/privacy-policy",
+        // route: "/privacy-policy",
       },
 
       {
         name: "Terms of service",
-        route: "/terms-of-service",
+        // route: "/terms-of-service",
       },
     ],
   },
@@ -31,12 +31,12 @@ const Footer: FooterType[] = [
     links: [
       {
         name: "Custom Software Development",
-        route: "/custom-software-development",
+        route: "/software-development",
       },
 
       {
         name: "Blockchain Development",
-        route: "/blockchain-development",
+        route: "/blockchain",
       },
 
       {
@@ -46,17 +46,17 @@ const Footer: FooterType[] = [
 
       {
         name: "AI and ML Development",
-        route: "/ai-and-ml-development",
+        route: "/ai-and-ml",
       },
 
       {
         name: "Outsourcing & Recruitment",
-        route: "/outsourcing-and-recruitment",
+        route: "/outsourcing",
       },
 
       {
         name: "Software Maintenance",
-        route: "/software-maintenance",
+        route: "/maintenance",
       },
 
       {

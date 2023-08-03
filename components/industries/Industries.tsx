@@ -6,7 +6,8 @@ export default function Industries() {
     <section className={styles.industries}>
       <div className={styles.industriesHeader}>
         <h3 className={styles.sectionTitleDark}>
-          Key industries<span className={styles.dot}>.</span>
+          Key industries
+          <span className={`${styles.sectionTitleDark} ${styles.dot}`}>.</span>
         </h3>
         <p className={styles.sectionBodyDark}>
           Domains we have mastered and conquered

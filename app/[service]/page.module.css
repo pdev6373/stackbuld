@@ -7,7 +7,16 @@
   border-radius: 16px;
   overflow: hidden;
   border: 4px solid #ffffff;
-  padding-inline: clamp(40px, 5.555555vw, 80px);
+  margin-inline: clamp(40px, 5.555555vw, 80px);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.sectionTitleWrapper {
+  margin-bottom: 4px;
+  max-width: 900px;
+  padding-block: clamp(40px, 5.555555vw, 80px) 164px;
+  text-align: left;
 }
 
 .sectionTitle {
@@ -15,10 +24,10 @@
   font-size: clamp(36px, 3.33333vw, 48px);
   font-weight: 700;
   line-height: 1.208;
-  margin-bottom: 4px;
-  max-width: 900px;
-  padding-block: clamp(40px, 5.555555vw, 80px) 164px;
-  margin-inline: auto;
+}
+
+.dot {
+  color: #17c2c2;
 }
 
 @media (max-width: 700px) {
