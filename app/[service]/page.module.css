@@ -15,7 +15,7 @@
 .sectionTitleWrapper {
   margin-bottom: 4px;
   max-width: 900px;
-  padding-block: clamp(40px, 5.555555vw, 80px) 164px;
+  padding-block: clamp(60px, 11.3889vw, 164px) clamp(40px, 5.555555vw, 80px);
   text-align: left;
 }
 
@@ -47,12 +47,23 @@
   .videoWrapper {
     border-radius: 0;
     border: none;
-    padding-inline: 0;
+    margin-inline: 0;
   }
 }
 
 @media (max-width: 480px) {
   .sectionTitle {
     font-size: 24px;
+    padding-block: 0;
+    margin: 0;
+  }
+
+  .sectionTitleWrapper {
+    padding-block: 40px 32px;
+    margin: 0;
+  }
+
+  .wrapper {
+    padding-inline: 20px;
   }
 }

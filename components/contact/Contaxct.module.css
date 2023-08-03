@@ -271,4 +271,8 @@
   .error {
     font-size: 14px;
   }
+
+  .form {
+    padding-inline: 20px;
+  }
 }
