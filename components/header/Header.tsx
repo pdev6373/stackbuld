@@ -40,8 +40,12 @@ export default function Header({ type, invertButton }: HeaderType) {
 
               <div className={styles.servicesNav}>
                 {Navs.find((nav) => nav.name === "Services")!.links?.map(
-                  (nav) => (
-                    <Link href={nav.route} className={styles.servicesLink}>
+                  (nav, index) => (
+                    <Link
+                      href={nav.route}
+                      className={styles.servicesLink}
+                      key={index}
+                    >
                       <div className={styles.servicesLinkInner}>
                         <Image
                           alt="nav image"
@@ -131,10 +135,10 @@ export default function Header({ type, invertButton }: HeaderType) {
         <div className={styles.navMobileWrapper}>
           {Navs.map((nav, index) =>
             nav.links?.length ? (
-              <div>
+              <div key={index}>
                 <h2 className={styles.mobileServiceHeader}>Services</h2>
                 <div className={styles.innerNavs}>
-                  {nav.links.map((link) => (
+                  {nav.links.map((link, index) => (
                     <Link
                       href={link.route}
                       className={styles.linkMobile}
