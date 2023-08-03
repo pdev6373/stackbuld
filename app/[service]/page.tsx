@@ -22,7 +22,7 @@ const routes = [
   "/software-development",
 ];
 
-export default function page() {
+export default function Service() {
   const pathname = usePathname();
   const router = useRouter();
 
