@@ -26,10 +26,13 @@ export default function Service() {
   const pathname = usePathname();
   const router = useRouter();
 
-  if (!routes.some((route) => pathname === route)) {
-    router.push("/");
-    return;
-  }
+  useEffect(() => {
+    setCurrentService(
+      ServiceConstants.find(
+        (service) => service.route === pathname
+      ) as ServicePageType
+    );
+  }, [pathname]);
 
   const serviceHandler = () =>
     ServiceConstants.find(
@@ -38,13 +41,10 @@ export default function Service() {
 
   const [currentService, setCurrentService] = useState(serviceHandler());
 
-  useEffect(() => {
-    setCurrentService(serviceHandler());
-  }, [pathname]);
-
-  // return {
-  //   notFound: true,
-  // };
+  if (!routes.some((route) => pathname === route)) {
+    router.push("/");
+    return;
+  }
 
   return (
     <main>
