@@ -149,6 +149,7 @@ export default function Contact() {
                 {field.label}
                 {field.isRequired ? "*" : ""}
               </label>
+
               <input
                 type={field.type}
                 id={field.label}
