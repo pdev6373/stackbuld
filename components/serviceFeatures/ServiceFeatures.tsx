@@ -32,13 +32,13 @@ export default function ServiceFeatures({
     else setShowSteps(false);
     if (mainCoordinates?.bottom <= 350) setShowSteps(false);
 
-    if (firstCoordinates?.y <= 200) setIsFirstShown(true);
+    if (firstCoordinates?.y <= 150) setIsFirstShown(true);
     else setIsFirstShown(false);
 
-    if (secondCoordinates?.y <= 200) setIsSecondShowm(true);
+    if (secondCoordinates?.y <= 150) setIsSecondShowm(true);
     else setIsSecondShowm(false);
 
-    if (thirdCoordinates?.y <= 200) setIsThirdShown(true);
+    if (thirdCoordinates?.y <= 150) setIsThirdShown(true);
     else setIsThirdShown(false);
   };
 

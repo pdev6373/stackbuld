@@ -58,18 +58,12 @@ export default function Service() {
         serviceTitleBackground={currentService.heroBackground}
         serviceTitleColor={currentService.heroColor}
         serviceTitleText={currentService.heroTopTitle}
-
-        // showImage={currentService.heroBackground}
-        // heroColor={currentService.heroColor}
       />
-      <div className={styles.wrapper}>
-        <div className={styles.sectionTitleWrapper}>
-          <span className={styles.sectionTitle}>
-            {currentService.bodyTitle}
-          </span>
-          <span className={`${styles.sectionTitle} ${styles.dot}`}>.</span>
-        </div>
+      <div className={styles.sectionTitleWrapper}>
+        <span className={styles.sectionTitle}>{currentService.bodyTitle}</span>
+        <span className={`${styles.sectionTitle} ${styles.dot}`}>.</span>
       </div>
+
       <div className={styles.videoWrapper}>
         <Video />
       </div>

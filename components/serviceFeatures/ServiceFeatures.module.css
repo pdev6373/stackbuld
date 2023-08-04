@@ -96,6 +96,7 @@
   display: flex;
   justify-content: space-between;
   padding-block: clamp(40px, 5.555555vw, 80px) clamp(60px, 10.9722vw, 158px);
+  padding-inline: clamp(40px, 5.555555vw, 80px);
 }
 
 .steps {
@@ -205,7 +206,7 @@
 
 @media (max-width: 700px) {
   .container {
-    padding-block: 60px;
+    padding: 60px 24px;
   }
 
   .imageWrapper {
@@ -214,6 +215,7 @@
 
   .featureMain {
     width: 100%;
+    gap: 14px;
   }
 
   .featureHeader {
@@ -231,7 +233,7 @@
   }
 
   .container {
-    padding-top: 40px;
+    padding-inline: 20px;
   }
 
   .featureTextsWrapper {
@@ -252,7 +254,7 @@
   }
 
   .featureMain {
-    gap: 14px;
+    gap: 12px;
   }
 }
 
