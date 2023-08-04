@@ -116,6 +116,7 @@
 @media (max-width: 700px) {
   .footer {
     padding: 60px 24px;
+    gap: 60px;
   }
 
   .footerHeader {
@@ -163,6 +164,7 @@
 @media (max-width: 480px) {
   .footer {
     padding-inline: 20px;
+    gap: 40px;
   }
 }
 
