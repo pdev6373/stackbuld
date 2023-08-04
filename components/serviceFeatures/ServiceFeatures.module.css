@@ -223,10 +223,6 @@
   .featureBody {
     font-size: 18px;
   }
-
-  .wrapper {
-    gap: 60px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -254,11 +250,19 @@
     gap: 12px;
     padding: 12px;
   }
+
+ 
 }
 
 @media (max-width: 380px) {
   .toolsWrapper {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 320px) {
+    .wrapper {
+    gap: 60px;
   }
 }
