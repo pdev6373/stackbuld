@@ -44,7 +44,7 @@
   display: flex;
   align-items: flex-end;
   flex-basis: 3rem;
-  transition: flex-basis 500ms, flex-grow 500ms;
+  transition: flex-basis 500ms, flex-grow 500ms, border-radius 500ms;
   background: url("../../assets/images/project-image-1.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -89,7 +89,7 @@
 .accordionPanel:has([aria-expanded="true"]) .accordionContent {
   opacity: 1;
   transform: translateY(0);
-  transition: transform 400ms 400ms, opacity 400ms 400ms;
+  transition: transform 400ms 390ms, opacity 400ms 400ms;
 }
 
 .accordionChip {
@@ -180,7 +180,13 @@
 }
 
 @media (max-width: 900px) {
+  .accordionPanel {
+    width: 20px;
+    border-radius: 100vh;
+  }
+
   .accordionPanel:has([aria-expanded="true"]) {
+    border-radius: 15px;
     flex-grow: 9;
   }
 }
@@ -202,6 +208,18 @@
   .projectsHeader {
     gap: 40px;
   }
+
+  .accordionPanel {
+    width: 100%;
+  }
+
+  .projectsHeader {
+    gap: 24px;
+  }
+
+  .projects {
+    gap: 24px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -211,12 +229,12 @@
   }
 
   .projects {
-    gap: 32px;
+    gap: 20px;
     padding-inline: 20px;
   }
 
   .projectsHeader {
-    gap: 48px;
+    gap: 20px;
   }
 
   .accordionChip {

@@ -67,6 +67,7 @@
 @media (max-width: 700px) {
   .services {
     padding: 60px 24px;
+    gap: 24px;
   }
 
   .sectionTitle {
@@ -94,7 +95,12 @@
     flex-direction: column;
   }
 
+  .servicesMobile {
+    gap: 20px;
+  }
+
   .services {
     padding-inline: 20px;
+    gap: 20px;
   }
 }
