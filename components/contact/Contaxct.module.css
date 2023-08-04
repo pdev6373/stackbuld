@@ -267,11 +267,11 @@
   }
 
   .contactTop {
-    gap: 40px;
+    gap: 24px;
   }
 
   .contact {
-    gap: 48px;
+    gap: 24px;
   }
 
   .error {
@@ -282,6 +282,16 @@
   .ldsDualRing:after {
     width: 20px;
     height: 20px;
+  }
+
+  .form {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .formInputWrapper {
+    width: 100%;
   }
 }
 
@@ -298,11 +308,11 @@
   }
 
   .contactTop {
-    gap: 36px;
+    gap: 20px;
   }
 
   .contact {
-    gap: 40px;
+    gap: 20px;
     padding-inline: 20px;
   }
 
@@ -311,6 +321,14 @@
   }
 
   .form {
-    padding-inline: 20px;
+    padding: 20px;
+  }
+
+  .line {
+    margin-block: 20px;
+  }
+
+  .formInputs {
+    gap: 20px;
   }
 }
