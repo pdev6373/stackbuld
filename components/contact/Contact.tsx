@@ -48,8 +48,8 @@ export default function Contact() {
     },
   ]);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = async (e?: FormEvent<HTMLFormElement>) => {
+    e && e.preventDefault();
 
     let formValues = {} as FormValueType;
 
@@ -237,6 +237,7 @@ export default function Contact() {
 
           {!!error.length && <p className={styles.error}>{error}</p>}
           <button
+            onClick={() => handleSubmit()}
             className={styles.formButton}
             style={{ backgroundColor: isSuccessful ? "#5cb85c" : "#17c2c2" }}
           >
