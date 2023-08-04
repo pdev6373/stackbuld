@@ -23,22 +23,22 @@ export default function ServiceFeatures({
   const [isThirdShown, setIsThirdShown] = useState(false);
 
   const getVerticalCoordinates = () => {
-    const mainCoordinates = mainRef.current.getBoundingClientRect();
-    const firstCoordinates = firstRef.current.getBoundingClientRect();
-    const secondCoordinates = secondRef.current.getBoundingClientRect();
-    const thirdCoordinates = thirdRef.current.getBoundingClientRect();
+    const mainCoordinates = mainRef?.current?.getBoundingClientRect();
+    const firstCoordinates = firstRef?.current?.getBoundingClientRect();
+    const secondCoordinates = secondRef?.current?.getBoundingClientRect();
+    const thirdCoordinates = thirdRef?.current?.getBoundingClientRect();
 
-    if (mainCoordinates.y <= 10) setShowSteps(true);
+    if (mainCoordinates?.y <= 10) setShowSteps(true);
     else setShowSteps(false);
-    if (mainCoordinates.bottom <= 350) setShowSteps(false);
+    if (mainCoordinates?.bottom <= 350) setShowSteps(false);
 
-    if (firstCoordinates.y <= 200) setIsFirstShown(true);
+    if (firstCoordinates?.y <= 200) setIsFirstShown(true);
     else setIsFirstShown(false);
 
-    if (secondCoordinates.y <= 200) setIsSecondShowm(true);
+    if (secondCoordinates?.y <= 200) setIsSecondShowm(true);
     else setIsSecondShowm(false);
 
-    if (thirdCoordinates.y <= 200) setIsThirdShown(true);
+    if (thirdCoordinates?.y <= 200) setIsThirdShown(true);
     else setIsThirdShown(false);
   };
 
