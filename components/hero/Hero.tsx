@@ -20,7 +20,13 @@ export default function Hero({
     <div className={styles.container}>
       <Header type={type} invertButton={invertButton} />
       <section className={styles.heroWrapper}>
-        <div className={styles.heroContent}>
+        <div
+          className={
+            type === "services"
+              ? styles.heroContentServices
+              : styles.heroContent
+          }
+        >
           {type === "services" && (
             <p
               className={styles.serviceType}
@@ -32,7 +38,12 @@ export default function Hero({
               {serviceTitleText}
             </p>
           )}
-          <h3 className={styles.heroTitle} style={titleStyles}>
+          <h3
+            className={`${styles.heroTitle} ${
+              type === "services" && styles.heroServiceTitle
+            }`}
+            style={titleStyles}
+          >
             {title}
             <span className={styles.dot}>.</span>
           </h3>

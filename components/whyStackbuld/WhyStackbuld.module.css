@@ -64,7 +64,6 @@
 .whyNumber {
   color: transparent;
   font-size: clamp(120px, 13.88889vw, 200px);
-  /* font-size: 200px; */
   font-weight: 700;
   line-height: 0.85;
   text-shadow: 4px 4px 0 transparent;

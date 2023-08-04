@@ -52,8 +52,8 @@ export default function Service() {
         heroImage={currentService.heroImage}
         title={currentService.heroTitle}
         type="services"
-        titleStyles={{ maxWidth: "1500px", marginBlock: "32px" }}
-        imageStyles={{ paddingTop: "393px" }}
+        titleStyles={{ maxWidth: "1500px" }}
+        imageStyles={{ paddingTop: "27.2919vw" }}
         serviceTitleBackground={currentService.heroBackground}
         serviceTitleColor={currentService.heroColor}
         serviceTitleText={currentService.heroTopTitle}

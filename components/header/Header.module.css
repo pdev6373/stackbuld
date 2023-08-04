@@ -1,5 +1,5 @@
 .headerWrapper {
-  padding-bottom: clamp(40px, 5.625vw, 81px);
+  padding-bottom: clamp(20px, 5.625vw, 81px);
   /* position: sticky;
   top: 0;
   left: 0;
@@ -334,10 +334,6 @@
 }
 
 @media (max-width: 480px) {
-  .linkMobile {
-    /* padding: 20px; */
-  }
-
   .linkMobileText {
     font-size: 16px;
   }
