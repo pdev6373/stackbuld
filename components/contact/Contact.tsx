@@ -9,6 +9,10 @@ import axios from "axios";
 export default function Contact() {
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [sendError, setSendError] = useState("");
+  const [isSuccessful, setIsSuccessful] = useState(false);
+  const [file, setFile] = useState<any>(null);
 
   const [formFields, setFormFields] = useState<FormFieldType[]>([
     {
@@ -44,7 +48,7 @@ export default function Contact() {
     },
   ]);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     let formValues = {} as FormValueType;
@@ -73,19 +77,32 @@ export default function Contact() {
       return;
     }
 
-    console.log("holla");
+    const formData = new FormData();
+    !!file.name.length && formData.append("attachment", file);
 
-    axios({
-      method: "POST",
-      url: "https://formbold.com/s/3NKdg",
-      data: { ...formValues, message },
-    })
-      .then((r) => {
-        console.log("hello");
-      })
-      .catch((r) => {
-        console.log("error");
+    try {
+      setLoading(true);
+      setSendError("");
+      setError("");
+
+      await axios({
+        method: "POST",
+        url: "https://formspree.io/f/xjvqgjyq",
+        // data: { ...formValues, message, attachment: formData },
+        data: { ...formValues, message },
+        headers: {
+          "content-type": "multipart/form-data",
+        },
       });
+
+      setIsSuccessful(true);
+    } catch (error) {
+      setIsSuccessful(false);
+      setSendError("Oops! an error occurred!, please try again");
+      setError("Oops! an error occurred!, please try again");
+    } finally {
+      setLoading(false);
+    }
 
     // fetch("https://formbold.com/s/3NKdg", {
     //   method: "POST",
@@ -210,10 +227,29 @@ export default function Contact() {
               height={32}
             />
             <p className={styles.attachmentText}>Add attachment</p>
+            {/* <input
+              onChange={(e: any) => setFile(e.target.files[0])}
+              type="file"
+              name="attachment"
+              accept="application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint, text/plain, application/pdf, image/*"
+            ></input> */}
           </div>
 
           {!!error.length && <p className={styles.error}>{error}</p>}
-          <button className={styles.formButton}>Send message</button>
+          <button
+            className={styles.formButton}
+            style={{ backgroundColor: isSuccessful ? "#5cb85c" : "#17c2c2" }}
+          >
+            {loading ? (
+              <div className={styles.ldsDualRing}></div>
+            ) : !sendError.length && !isSuccessful ? (
+              "Send message"
+            ) : !sendError.length && isSuccessful ? (
+              "Sent Successfully"
+            ) : (
+              "Send message"
+            )}
+          </button>
         </div>
       </form>
     </section>

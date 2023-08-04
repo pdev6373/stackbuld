@@ -108,11 +108,13 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2;
-  background: #17c2c2;
   padding: 1.1em;
   border-radius: 16px;
   width: 100%;
   transition: opacity 0.15s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .error {
@@ -172,6 +174,32 @@
   font-weight: 700;
   line-height: 1.208;
   color: #4b5e71;
+}
+
+.ldsDualRing {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.ldsDualRing:after {
+  content: " ";
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 1100px) {

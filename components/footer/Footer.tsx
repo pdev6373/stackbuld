@@ -38,7 +38,7 @@ export default function Footer() {
             <h3 className={styles.footerHeader}>{nav.name}</h3>
 
             <div className={styles.footerNavs}>
-              {nav.links.map((link) =>
+              {nav.links.map((link, index) =>
                 link.route ? (
                   <Link
                     href={link.route}
