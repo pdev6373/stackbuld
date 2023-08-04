@@ -229,15 +229,29 @@
 @media (max-width: 700px) {
   .quotes {
     padding: 60px 24px;
+    gap: 24px;
+  }
+
+  .quotesBottom {
+    gap: 24px;
+  }
+
+  .quotesWrapper {
+    gap: 24px;
   }
 
   .quotesDisplay {
-    padding: 48px 24px;
+    padding: 24px;
     gap: 60px;
   }
 
   .achievements {
     padding: 0;
+  }
+
+  .achievement {
+    gap: 24px;
+    padding: 24px;
   }
 
   .sectionTitleDark {
@@ -273,15 +287,19 @@
 
   .quotesBottom {
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
   }
 
   .quotesDisplay {
-    padding: 24px;
+    padding: 20px;
   }
 
   .achievementTitle {
     font-size: 30px;
+  }
+
+  .quotesBottomMain {
+    align-self: flex-start;
   }
 
   .quotesHeader {
@@ -330,6 +348,16 @@
 
   .quotes {
     padding-inline: 20px;
+    gap: 20px;
+  }
+
+  .quotesWrapper {
+    gap: 20px;
+  }
+
+  .achievement {
+    gap: 20px;
+    padding: 20px;
   }
 }
 
@@ -347,7 +375,5 @@
   .achievement {
     flex-direction: column-reverse;
     align-items: flex-start;
-    padding-block: 30px;
-    gap: 24px;
   }
 }

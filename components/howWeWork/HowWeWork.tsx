@@ -16,22 +16,22 @@ export default function HowWeWork() {
   const [isSupportShown, setIsSupportShown] = useState(false);
 
   const getVerticalCoordinates = () => {
-    const mainCoordinates = mainRef.current.getBoundingClientRect();
-    const designCoordinates = designRef.current.getBoundingClientRect();
-    const developCoordinates = developRef.current.getBoundingClientRect();
-    const supportCoordinates = supportRef.current.getBoundingClientRect();
+    const mainCoordinates = mainRef?.current?.getBoundingClientRect();
+    const designCoordinates = designRef?.current?.getBoundingClientRect();
+    const developCoordinates = developRef?.current?.getBoundingClientRect();
+    const supportCoordinates = supportRef?.current?.getBoundingClientRect();
 
-    if (mainCoordinates.y <= 40) setShowSteps(true);
+    if (mainCoordinates?.y <= 40) setShowSteps(true);
     else setShowSteps(false);
-    if (mainCoordinates.bottom <= 300) setShowSteps(false);
+    if (mainCoordinates?.bottom <= 300) setShowSteps(false);
 
-    if (designCoordinates.y <= 200) setIsDesignShown(true);
+    if (designCoordinates?.y <= 200) setIsDesignShown(true);
     else setIsDesignShown(false);
 
-    if (developCoordinates.y <= 200) setIsDevelopedShown(true);
+    if (developCoordinates?.y <= 200) setIsDevelopedShown(true);
     else setIsDevelopedShown(false);
 
-    if (supportCoordinates.y <= 200) setIsSupportShown(true);
+    if (supportCoordinates?.y <= 200) setIsSupportShown(true);
     else setIsSupportShown(false);
   };
 
