@@ -48,8 +48,8 @@ export default function Contact() {
     },
   ]);
 
-  const handleSubmit = async (e?: FormEvent<HTMLFormElement>) => {
-    e && e.preventDefault();
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
     let formValues = {} as FormValueType;
 
@@ -77,8 +77,8 @@ export default function Contact() {
       return;
     }
 
-    const formData = new FormData();
-    !!file.name.length && formData.append("attachment", file);
+    // const formData = new FormData();
+    // !!file.name.length && formData.append("attachment", file);
 
     try {
       setLoading(true);
@@ -214,6 +214,7 @@ export default function Contact() {
                 setError("");
                 setMessage(e.target.value);
               }}
+              value={message}
               id="messageId"
               className={`${styles.formInput} ${styles.textareaInput}`}
             ></textarea>
@@ -237,7 +238,6 @@ export default function Contact() {
 
           {!!error.length && <p className={styles.error}>{error}</p>}
           <button
-            onClick={() => handleSubmit()}
             className={styles.formButton}
             style={{ backgroundColor: isSuccessful ? "#5cb85c" : "#17c2c2" }}
           >

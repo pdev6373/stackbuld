@@ -277,6 +277,12 @@
   .error {
     font-size: 14px;
   }
+
+  .ldsDualRing,
+  .ldsDualRing:after {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media (max-width: 480px) {
