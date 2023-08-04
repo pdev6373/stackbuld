@@ -4,7 +4,7 @@
   gap: 32px;
   text-align: center;
   padding-inline: clamp(40px, 5.555557vw, 80px);
-  padding-bottom: clamp(60px, 7.2222vw, 104px);
+  padding-bottom: clamp(80px, 11.3889vw, 164px);
 }
 
 .imagesWrapper {
@@ -136,6 +136,7 @@
 @media (max-width: 700px) {
   .wrapper {
     padding: 60px 24px;
+    gap: 24px;
   }
 
   .header {
@@ -153,12 +154,20 @@
   .achievementIcon {
     display: none;
   }
-}
 
-@media (max-width: 530px) {
   .imageWrapperOuter {
+    justify-content: flex-start;
     width: 50%;
-    height: 90px;
+    height: 100px;
+  }
+
+  .imageWrapperOuter:nth-child(even) {
+    justify-content: flex-end;
+  }
+
+  .achievement {
+    padding: 24px;
+    gap: 24px;
   }
 }
 
@@ -169,8 +178,8 @@
 
   .achievement {
     flex-direction: column;
-    padding: 36px 24px;
-    gap: 24px;
+    padding: 20px;
+    gap: 20px;
   }
 
   .header {
@@ -187,14 +196,7 @@
 
   .wrapper {
     padding-inline: 20px;
-  }
-
-  .imageWrapperOuter {
-    justify-content: flex-start;
-  }
-
-  .imageWrapperOuter:nth-child(even) {
-    justify-content: flex-end;
+    gap: 20px;
   }
 }
 

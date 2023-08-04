@@ -6,21 +6,21 @@
   gap: 208px;
 }
 
-@media (max-width: 700px) {
-  .wrapper {
-    padding: 40px 24px 60px;
-  }
-}
-
 @media (max-width: 1100px) {
   .wrapper {
     gap: 180px;
   }
 }
 
+@media (max-width: 900px) {
+  .wrapper {
+    gap: 140px;
+  }
+}
+
 @media (max-width: 700px) {
   .wrapper {
-    gap: 110px;
+    gap: 104px;
     padding: 60px 24px;
   }
 }
