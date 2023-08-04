@@ -251,7 +251,9 @@
     padding: 12px;
   }
 
- 
+  .featureMain {
+    gap: 14px;
+  }
 }
 
 @media (max-width: 380px) {
@@ -262,7 +264,7 @@
 }
 
 @media (max-width: 320px) {
-    .wrapper {
+  .wrapper {
     gap: 60px;
   }
 }
