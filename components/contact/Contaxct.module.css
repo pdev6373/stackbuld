@@ -273,6 +273,10 @@
   .contact {
     gap: 48px;
   }
+
+  .error {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -297,7 +301,7 @@
   }
 
   .error {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .form {
