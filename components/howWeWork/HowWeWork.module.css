@@ -132,10 +132,10 @@
 }
 
 .processTitle {
-  color: #161a1d;
   font-size: 20px;
   font-weight: 600;
   line-height: 1.45;
+  color: #161a1d;
 }
 
 .processList {
