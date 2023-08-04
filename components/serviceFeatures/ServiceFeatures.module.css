@@ -104,7 +104,6 @@
   opacity: 0;
   transform: translateX(-400px);
   width: 20px;
-  transition: opacity 500ms, transform 200ms;
 }
 
 .lineInner {
@@ -128,6 +127,7 @@
 .stepsShow {
   transform: translateX(0);
   opacity: 1;
+  transition: opacity 500ms, transform 250ms;
 }
 
 .stepsInner {

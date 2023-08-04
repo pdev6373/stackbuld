@@ -75,7 +75,6 @@
   opacity: 0;
   transform: translateX(-400px);
   width: 110px;
-  transition: opacity 500ms, transform 200ms;
 }
 
 .lineInner {
@@ -99,6 +98,7 @@
 .stepsShow {
   transform: translateX(0);
   opacity: 1;
+  transition: opacity 500ms, transform 250ms;
 }
 
 .stepsInner {
@@ -234,6 +234,7 @@
 @media (max-width: 700px) {
   .wrapper {
     padding: 60px 24px;
+    gap: 72px;
   }
 
   .sectionTitle {
@@ -250,17 +251,13 @@
     font-size: 18px;
   }
 
-  .process {
-    gap: 18px;
-  }
-
   .processTitle,
   .processItemText {
     font-size: 18px;
   }
 
   .allProcesses {
-    gap: 80px;
+    gap: 72px;
   }
 
   .headerTexts {
@@ -296,7 +293,8 @@
     font-size: 16px;
   }
 
-  .allProcesses {
+  .allProcesses,
+  .wrapper {
     gap: 60px;
   }
 

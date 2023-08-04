@@ -12,12 +12,10 @@ export default function FAQ() {
     <section className={styles.wrapper}>
       <div className={styles.faqHeader}>
         <h3 className={styles.sectionTitleDark}>
-          Key industries
+          FAQs
           <span className={`${styles.sectionTitleDark} ${styles.dot}`}>.</span>
         </h3>
-        <p className={styles.sectionBodyDark}>
-          Domains we have mastered and conquered
-        </p>
+        <p className={styles.sectionBodyDark}>Our frequently asked questions</p>
       </div>
 
       <div className={styles.faqs}>

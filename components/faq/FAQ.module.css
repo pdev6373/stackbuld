@@ -127,6 +127,7 @@
 
   .wrapper {
     padding: 60px 24px;
+    gap: 24px;
   }
 
   .question {
@@ -139,11 +140,11 @@
   }
 
   .faq {
-    padding: 28px;
+    padding: 24px;
   }
 
   .questionWrapper {
-    gap: 20px;
+    gap: 24px;
   }
 }
 
@@ -163,5 +164,10 @@
 
   .wrapper {
     padding-inline: 20px;
+    gap: 20px;
+  }
+
+  .questionWrapper {
+    gap: 20px;
   }
 }
