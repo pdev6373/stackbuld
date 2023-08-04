@@ -254,10 +254,6 @@
   .accordionContent {
     gap: 12px;
   }
-
-  .projectsNavigation {
-    gap: 32px;
-  }
 }
 
 @media (max-width: 380px) {
