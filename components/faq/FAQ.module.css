@@ -88,7 +88,7 @@
 .questionWrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
 }
 
@@ -155,7 +155,7 @@
   }
 
   .faq {
-    padding: 24px;
+    padding: 20px;
   }
 
   .faqCurrent .answer {

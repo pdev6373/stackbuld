@@ -12,7 +12,7 @@
   font-size: clamp(36px, 3.33333vw, 48px);
   font-weight: 700;
   line-height: 1.208;
-  margin-bottom: 4px;
+  /* margin-bottom: 4px; */
   max-width: 632px;
   color: #f6f7f9;
 }
@@ -120,9 +120,9 @@
     font-size: 30px;
   }
 
-  .header {
+  /* .header {
     margin-bottom: 8px;
-  }
+  } */
 
   .header,
   .questionMark {
@@ -131,7 +131,7 @@
 
   .wrapper {
     padding: 60px 24px;
-    gap: 32px;
+    gap: 24px;
   }
 
   .whyWrapper {
@@ -151,6 +151,7 @@
 
   .bottom {
     margin-top: 60px;
+    gap: 24px;
   }
 }
 
@@ -178,5 +179,6 @@
 
   .bottom {
     margin-top: 40px;
+    gap: 20px;
   }
 }
