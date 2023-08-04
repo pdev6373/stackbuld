@@ -75,6 +75,7 @@ export type ProjectType = {
 export type HeaderType = {
   type: "home" | "about" | "process" | "services";
   invertButton?: boolean;
+  contactRoute: string;
 };
 
 export type HeroType = {
@@ -89,6 +90,7 @@ export type HeroType = {
   serviceTitleBackground?: string;
   serviceTitleColor?: string;
   serviceTitleText?: string;
+  contactRoute: string;
 };
 
 export type AttributeType = {

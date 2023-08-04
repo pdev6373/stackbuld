@@ -75,6 +75,7 @@
   border-radius: 16px;
   outline: 1px solid #17c2c2;
   transition: color background-color 0.2s ease-out;
+  text-align: center;
 }
 
 .heroButton:hover {

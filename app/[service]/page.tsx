@@ -49,6 +49,7 @@ export default function Service() {
   return (
     <main>
       <Hero
+        contactRoute="/#contact"
         heroImage={currentService.heroImage}
         title={currentService.heroTitle}
         type="services"

@@ -6,6 +6,7 @@ export default function page() {
   return (
     <main>
       <Hero
+        contactRoute="/#contact"
         title="We transform businesses with technology"
         type="about"
         heroImage={Images.heroImage}

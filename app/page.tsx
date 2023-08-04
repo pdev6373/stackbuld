@@ -18,6 +18,7 @@ export default function Home() {
         type="home"
         heroImage={Images.heroImage}
         content="Harness the power of scalable software solutions to elevate your business performance and profitability."
+        contactRoute="#contact"
       />
       <Video />
       <Services />

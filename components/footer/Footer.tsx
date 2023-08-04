@@ -7,20 +7,26 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.copyrightWrapper}>
-        <Image
-          src={Images.logo}
-          alt="logo"
-          width={67}
-          height={64}
-          className={styles.footerLogo}
-        />
-        <Image
-          src={Images.logo}
-          alt="logo"
-          width={44.667}
-          height={42.667}
-          className={styles.footerLogoMobile}
-        />
+        <Link href="/">
+          <Image
+            src={Images.logo}
+            alt="logo"
+            width={67}
+            height={64}
+            className={styles.footerLogo}
+          />
+        </Link>
+
+        <Link href="/">
+          <Image
+            src={Images.logo}
+            alt="logo"
+            width={44.667}
+            height={42.667}
+            className={styles.footerLogoMobile}
+          />
+        </Link>
+
         <p className={styles.copyright}>
           © 2023 Stackbuld, All rights reserved
         </p>

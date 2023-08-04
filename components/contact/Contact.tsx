@@ -4,6 +4,7 @@ import { Images } from "@/constants";
 import styles from "./Contaxct.module.css";
 import Image from "next/image";
 import { FormFieldType, FormValueType } from "@/types";
+import axios from "axios";
 
 export default function Contact() {
   const [error, setError] = useState("");
@@ -72,21 +73,35 @@ export default function Contact() {
       return;
     }
 
-    fetch("https://formspree.io/f/xjvqgjyq", {
+    console.log("holla");
+
+    axios({
       method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      // body: JSON.stringify(formValues),
-      body: JSON.stringify({ ...formValues, message }),
+      url: "https://formbold.com/s/3NKdg",
+      data: { ...formValues, message },
     })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
+      .then((r) => {
+        console.log("hello");
       })
-      .catch((error) => {
-        console.error(error);
+      .catch((r) => {
+        console.log("error");
       });
+
+    // fetch("https://formbold.com/s/3NKdg", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-type": "application/json",
+    //   },
+    //   // body: JSON.stringify(formValues),
+    //   body: JSON.stringify({ ...formValues, message }),
+    // })
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //   })
+    //   .catch((error) => {
+    //     console.error(error);
+    //   });
   };
 
   return (
@@ -129,6 +144,7 @@ export default function Contact() {
       </div>
 
       <form
+        id="contact"
         className={styles.form}
         onSubmit={(e) => handleSubmit(e)}
         noValidate

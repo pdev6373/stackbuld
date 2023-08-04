@@ -1,5 +1,6 @@
 import { Why } from "@/constants";
 import styles from "./WhyStackbuld.module.css";
+import Link from "next/link";
 
 export default function WhyStackbuld() {
   return (
@@ -30,7 +31,9 @@ export default function WhyStackbuld() {
           </p>
         </div>
 
-        <button className={styles.bottomButton}>Start your project</button>
+        <Link href="/#contact" className={styles.bottomButton}>
+          Start your project
+        </Link>
       </div>
     </section>
   );

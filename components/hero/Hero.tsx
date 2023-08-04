@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./Hero.module.css";
 import { HeroType } from "@/types";
 import { Header } from "..";
+import Link from "next/link";
 
 export default function Hero({
   title,
@@ -15,10 +16,15 @@ export default function Hero({
   serviceTitleBackground,
   serviceTitleColor,
   serviceTitleText,
+  contactRoute,
 }: HeroType) {
   return (
     <div className={styles.container}>
-      <Header type={type} invertButton={invertButton} />
+      <Header
+        type={type}
+        invertButton={invertButton}
+        contactRoute={contactRoute}
+      />
       <section className={styles.heroWrapper}>
         <div
           className={
@@ -53,7 +59,9 @@ export default function Hero({
           )}
 
           {type !== "about" && (
-            <button className={styles.heroButton}>Contact us</button>
+            <Link className={styles.heroButton} href={contactRoute}>
+              Contact us
+            </Link>
           )}
         </div>
 

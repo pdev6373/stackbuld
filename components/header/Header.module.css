@@ -52,6 +52,7 @@
   padding-block: 0.875em;
   padding-inline: 1.5em;
   transition: color background-color 0.2s ease-out;
+  text-align: center;
 }
 
 .headerButtonMobile {
@@ -277,12 +278,10 @@
     left: -1000px;
     background: #161a1df7;
     top: 0;
-    bottom: 0;
     height: 100vh;
     width: 100%;
     z-index: 100;
     transition: left 0.3s ease-out;
-    overflow: hidden;
     overflow-y: auto;
   }
 

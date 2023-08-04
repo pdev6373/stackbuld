@@ -7,7 +7,11 @@ import Link from "next/link";
 import { useState } from "react";
 import { HeaderType } from "@/types";
 
-export default function Header({ type, invertButton }: HeaderType) {
+export default function Header({
+  type,
+  invertButton,
+  contactRoute,
+}: HeaderType) {
   const [openSideNav, setOpenSideNav] = useState(false);
 
   return (
@@ -90,13 +94,14 @@ export default function Header({ type, invertButton }: HeaderType) {
           )}
         </nav>
 
-        <button
+        <Link
           className={`${styles.headerButton} ${
             invertButton ? styles.headerButtonInvert : ""
           }`}
+          href={contactRoute}
         >
           Contact us
-        </button>
+        </Link>
         <Image
           src={Images.menu}
           width={40}
@@ -174,7 +179,13 @@ export default function Header({ type, invertButton }: HeaderType) {
           )}
         </div>
 
-        <button className={styles.headerButtonMobile}>Contact us</button>
+        <Link
+          href={contactRoute}
+          onClick={() => setOpenSideNav(false)}
+          className={styles.headerButtonMobile}
+        >
+          Contact us
+        </Link>
       </nav>
     </div>
   );

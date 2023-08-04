@@ -11,6 +11,7 @@ export default function page() {
         titleStyles={{ maxWidth: "920px" }}
         imageStyles={{ paddingTop: "8.3333vw" }}
         content="We harness the boundless power of technology and innovation and elevate your business performance. Your Vision brought to life by Our Expertise."
+        contactRoute="#contact"
       />
       <HowWeWork />
       <FAQ />
