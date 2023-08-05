@@ -9,7 +9,7 @@ export default function SectionWrapper({
   // margin = "0px 0px -5% 0px",
   margin = "0px 0px 0px 0px",
   type = "cover",
-  amount = "all",
+  amount = "some",
   duration = 0.5,
   nodelay = false,
   styles,
