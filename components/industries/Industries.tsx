@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { SectionWrapper } from "..";
 import styles from "./Industries.module.css";
 import { Industries as IndustriesComponent } from "@/constants";
@@ -23,30 +24,31 @@ export default function Industries() {
 
       <div className={styles.industriesWrapper}>
         {IndustriesComponent.map((industry, index) => (
-          <SectionWrapper
-            type="fade-in"
-            width="100%"
-            amount="some"
-            margin="0px 0px -25% 0px"
-            duration={0.7}
-          >
-            <div
-              className={`${styles.industry} ${
-                styles[industry.id.toLowerCase()]
-              }`}
-              key={index}
+          <Fragment key={index}>
+            <SectionWrapper
+              type="fade-in"
+              width="100%"
+              amount="some"
+              margin="0px 0px -25% 0px"
+              duration={0.7}
             >
-              <h3 className={styles.industryNameAlone}>{industry.name}</h3>
+              <div
+                className={`${styles.industry} ${
+                  styles[industry.id.toLowerCase()]
+                }`}
+              >
+                <h3 className={styles.industryNameAlone}>{industry.name}</h3>
 
-              <div className={styles.industryOverlay}></div>
-              <div className={styles.industryDetails}>
-                <h3 className={styles.industryName}>{industry.name}</h3>
-                <p className={styles.industryDescription}>
-                  {industry.description}
-                </p>
+                <div className={styles.industryOverlay}></div>
+                <div className={styles.industryDetails}>
+                  <h3 className={styles.industryName}>{industry.name}</h3>
+                  <p className={styles.industryDescription}>
+                    {industry.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          </SectionWrapper>
+            </SectionWrapper>
+          </Fragment>
         ))}
       </div>
     </section>

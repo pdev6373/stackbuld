@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./Footer.module.css";
 import { SectionWrapper } from "..";
+import { Fragment } from "react";
 
 export default function Footer() {
   return (
@@ -48,21 +49,19 @@ export default function Footer() {
             <div className={styles.footerNavs}>
               {nav.links.map((link, index) =>
                 link.route ? (
-                  <SectionWrapper type="fade-in">
-                    <Link
-                      href={link.route}
-                      className={styles.footerLink}
-                      key={index}
-                    >
-                      {link.name}
-                    </Link>
-                  </SectionWrapper>
+                  <Fragment key={index}>
+                    <SectionWrapper type="fade-in">
+                      <Link href={link.route} className={styles.footerLink}>
+                        {link.name}
+                      </Link>
+                    </SectionWrapper>
+                  </Fragment>
                 ) : (
-                  <SectionWrapper type="fade-in">
-                    <p className={styles.footerLink} key={index}>
-                      {link.name}
-                    </p>
-                  </SectionWrapper>
+                  <Fragment key={index}>
+                    <SectionWrapper type="fade-in">
+                      <p className={styles.footerLink}>{link.name}</p>
+                    </SectionWrapper>
+                  </Fragment>
                 )
               )}
             </div>
