@@ -163,4 +163,5 @@ export type ServicesWrapperType = {
   type?: "cover" | "fade-in";
   amount?: "all" | "some";
   duration?: number;
+  nodelay?: boolean;
 };

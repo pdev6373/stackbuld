@@ -11,6 +11,7 @@ export default function SectionWrapper({
   type = "cover",
   amount = "all",
   duration = 0.5,
+  nodelay = false,
 }: ServicesWrapperType) {
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -48,7 +49,7 @@ export default function SectionWrapper({
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration, delay: 0.3 }}
+        transition={{ duration, delay: nodelay ? 0 : 0.3 }}
         style={{ height: "100%" }}
       >
         {children}

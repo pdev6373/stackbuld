@@ -35,7 +35,7 @@ export default function Hero({
           }
         >
           {type === "services" && (
-            <SectionWrapper>
+            <SectionWrapper type="fade-in" nodelay={true}>
               <p
                 className={styles.serviceType}
                 style={{
@@ -47,7 +47,7 @@ export default function Hero({
               </p>
             </SectionWrapper>
           )}
-          <SectionWrapper>
+          <SectionWrapper type="fade-in" nodelay={true}>
             <h3
               className={`${styles.heroTitle} ${
                 type === "services" && styles.heroServiceTitle
@@ -60,13 +60,13 @@ export default function Hero({
           </SectionWrapper>
 
           {type !== "about" && type !== "services" && (
-            <SectionWrapper>
+            <SectionWrapper type="fade-in" nodelay={true}>
               <p className={styles.heroBody}>{content}</p>
             </SectionWrapper>
           )}
 
           {type !== "about" && (
-            <SectionWrapper>
+            <SectionWrapper type="fade-in" nodelay={true}>
               <Link className={styles.heroButton} href={contactRoute}>
                 Contact us
               </Link>
