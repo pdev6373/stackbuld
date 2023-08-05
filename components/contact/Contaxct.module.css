@@ -3,6 +3,7 @@
   padding-inline: clamp(40px, 5.555555vw, 80px);
   background: #161a1d;
   display: flex;
+  gap: 40px;
 }
 
 .contact > * {
@@ -11,6 +12,9 @@
 
 .contactHeader {
   max-width: 632px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .contactTop {
@@ -131,6 +135,7 @@
 .contactTopTexts {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 4px;
 }
 

@@ -23,17 +23,30 @@ export default function Industries() {
 
       <div className={styles.industriesWrapper}>
         {IndustriesComponent.map((industry, index) => (
-          <div className={styles.industry} key={index}>
-            <h3 className={styles.industryNameAlone}>{industry.name}</h3>
+          <SectionWrapper
+            type="fade-in"
+            width="100%"
+            amount="some"
+            margin="0px 0px -25% 0px"
+            duration={0.7}
+          >
+            <div
+              className={`${styles.industry} ${
+                styles[industry.id.toLowerCase()]
+              }`}
+              key={index}
+            >
+              <h3 className={styles.industryNameAlone}>{industry.name}</h3>
 
-            <div className={styles.industryOverlay}></div>
-            <div className={styles.industryDetails}>
-              <h3 className={styles.industryName}>{industry.name}</h3>
-              <p className={styles.industryDescription}>
-                {industry.description}
-              </p>
+              <div className={styles.industryOverlay}></div>
+              <div className={styles.industryDetails}>
+                <h3 className={styles.industryName}>{industry.name}</h3>
+                <p className={styles.industryDescription}>
+                  {industry.description}
+                </p>
+              </div>
             </div>
-          </div>
+          </SectionWrapper>
         ))}
       </div>
     </section>

@@ -158,10 +158,14 @@ export default function Contact() {
         />
 
         <div className={styles.contactTopTexts}>
-          <p className={styles.contactTopTextsText}>Don’t like forms?</p>
-          <p className={styles.contactTopTextsEmail}>
-            Email us: hello@stackbuld.com
-          </p>
+          <SectionWrapper>
+            <p className={styles.contactTopTextsText}>Don’t like forms?</p>
+          </SectionWrapper>
+          <SectionWrapper>
+            <p className={styles.contactTopTextsEmail}>
+              Email us: hello@stackbuld.com
+            </p>
+          </SectionWrapper>
         </div>
       </div>
 

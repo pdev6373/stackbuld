@@ -17,27 +17,27 @@
   gap: 32px;
 }
 
-.industry:first-child {
+.fintech {
   background: url("../../assets/images/industry-1.png");
 }
 
-.industry:nth-child(2) {
+.e-commerce {
   background: url("../../assets/images/industry-2.png");
 }
 
-.industry:nth-child(3) {
+.oil-and-gas {
   background: url("../../assets/images/industry-3.png");
 }
 
-.industry:nth-child(4) {
+.travel-and-recreation {
   background: url("../../assets//images/industry-4.png");
 }
 
-.industry:nth-child(5) {
+.insurance {
   background: url("../../assets//images/industry-5.png");
 }
 
-.industry:last-child {
+.logistics {
   background: url("../../assets//images/industry-6.png");
 }
 
@@ -49,17 +49,6 @@
   transition: background-color 0.4s;
 }
 
-.industry:first-child,
-.industry:nth-child(2),
-.industry:nth-child(3),
-.industry:nth-child(4),
-.industry:nth-child(5),
-.industry:last-child {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 .industry {
   padding: 32px;
   padding-bottom: 96px;
@@ -67,6 +56,10 @@
   position: relative;
   min-height: 350px;
   height: 100%;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .industryDetails {

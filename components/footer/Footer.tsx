@@ -2,55 +2,67 @@ import { Images, Footer as FooterNav } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Footer.module.css";
+import { SectionWrapper } from "..";
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.copyrightWrapper}>
-        <Link href="/">
-          <Image
-            src={Images.logo}
-            alt="logo"
-            width={67}
-            height={64}
-            className={styles.footerLogo}
-          />
-        </Link>
+        <SectionWrapper type="fade-in">
+          <Link href="/">
+            <Image
+              src={Images.logo}
+              alt="logo"
+              width={67}
+              height={64}
+              className={styles.footerLogo}
+            />
+          </Link>
+        </SectionWrapper>
+        <SectionWrapper type="fade-in">
+          <Link href="/">
+            <Image
+              src={Images.logo}
+              alt="logo"
+              width={44.667}
+              height={42.667}
+              className={styles.footerLogoMobile}
+            />
+          </Link>
+        </SectionWrapper>
 
-        <Link href="/">
-          <Image
-            src={Images.logo}
-            alt="logo"
-            width={44.667}
-            height={42.667}
-            className={styles.footerLogoMobile}
-          />
-        </Link>
-
-        <p className={styles.copyright}>
-          © 2023 Stackbuld, All rights reserved
-        </p>
+        <SectionWrapper type="fade-in">
+          <p className={styles.copyright}>
+            © 2023 Stackbuld, All rights reserved
+          </p>
+        </SectionWrapper>
       </div>
 
       <div className={styles.footerNavsWrapper}>
         {FooterNav.map((nav, index) => (
           <div className={styles.footerNavsWrapperInner} key={index}>
-            <h3 className={styles.footerHeader}>{nav.name}</h3>
+            <SectionWrapper type="fade-in">
+              <h3 className={styles.footerHeader}>{nav.name}</h3>
+            </SectionWrapper>
 
             <div className={styles.footerNavs}>
               {nav.links.map((link, index) =>
                 link.route ? (
-                  <Link
-                    href={link.route}
-                    className={styles.footerLink}
-                    key={index}
-                  >
-                    {link.name}
-                  </Link>
+                  <SectionWrapper type="fade-in">
+                    <Link
+                      href={link.route}
+                      className={styles.footerLink}
+                      key={index}
+                    >
+                      {link.name}
+                    </Link>
+                  </SectionWrapper>
                 ) : (
-                  <p className={styles.footerLink} key={index}>
-                    {link.name}
-                  </p>
+                  <SectionWrapper type="fade-in">
+                    <p className={styles.footerLink} key={index}>
+                      {link.name}
+                    </p>
+                  </SectionWrapper>
                 )
               )}
             </div>
@@ -58,55 +70,65 @@ export default function Footer() {
             {index === FooterNav.length - 1 ? (
               <>
                 <div className={styles.socialIconsMobile}>
-                  <Image
-                    src={Images.twitter}
-                    alt="social icon"
-                    width={32}
-                    height={32}
-                    className={styles.socialIcon}
-                  />
-
-                  <Image
-                    src={Images.facebook}
-                    alt="social icon"
-                    width={32}
-                    height={32}
-                    className={styles.socialIcon}
-                  />
-
-                  <Image
-                    src={Images.linkedin}
-                    alt="social icon"
-                    width={32}
-                    height={32}
-                    className={styles.socialIcon}
-                  />
+                  <SectionWrapper type="fade-in">
+                    <Image
+                      src={Images.twitter}
+                      alt="social icon"
+                      width={32}
+                      height={32}
+                      className={styles.socialIcon}
+                    />
+                  </SectionWrapper>
+                  <SectionWrapper type="fade-in">
+                    <Image
+                      src={Images.facebook}
+                      alt="social icon"
+                      width={32}
+                      height={32}
+                      className={styles.socialIcon}
+                    />
+                  </SectionWrapper>
+                  <SectionWrapper type="fade-in">
+                    <Image
+                      src={Images.linkedin}
+                      alt="social icon"
+                      width={32}
+                      height={32}
+                      className={styles.socialIcon}
+                    />
+                  </SectionWrapper>
                 </div>
 
                 <div className={styles.socialIcons}>
-                  <Image
-                    src={Images.twitter}
-                    alt="social icon"
-                    width={40}
-                    height={40}
-                    className={styles.socialIcon}
-                  />
+                  <SectionWrapper type="fade-in">
+                    <Image
+                      src={Images.twitter}
+                      alt="social icon"
+                      width={40}
+                      height={40}
+                      className={styles.socialIcon}
+                    />
+                  </SectionWrapper>
 
-                  <Image
-                    src={Images.facebook}
-                    alt="social icon"
-                    width={40}
-                    height={40}
-                    className={styles.socialIcon}
-                  />
+                  <SectionWrapper type="fade-in">
+                    <Image
+                      src={Images.facebook}
+                      alt="social icon"
+                      width={40}
+                      height={40}
+                      className={styles.socialIcon}
+                    />
+                  </SectionWrapper>
 
-                  <Image
-                    src={Images.linkedin}
-                    alt="social icon"
-                    width={40}
-                    height={40}
-                    className={styles.socialIcon}
-                  />
+                  <SectionWrapper type="fade-in">
+                    <Image
+                      src={Images.linkedin}
+                      alt="social icon"
+                      width={40}
+                      height={40}
+                      className={styles.socialIcon}
+                    />
+                  </SectionWrapper>
                 </div>
               </>
             ) : null}

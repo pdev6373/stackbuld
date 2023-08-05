@@ -73,16 +73,16 @@ export default function Hero({
             </SectionWrapper>
           )}
         </div>
-
-        <div
-          className={`${styles.heroImageWrapper} ${
-            showImage ? "" : styles.invisble
-          }`}
-          style={imageStyles ? imageStyles : {}}
-        >
-          <Image src={heroImage} alt="logo" className={styles.heroImage} fill />
-        </div>
       </section>
+
+      <div
+        className={`${styles.heroImageWrapper} ${
+          showImage ? "" : styles.invisble
+        }`}
+        style={imageStyles ? imageStyles : {}}
+      >
+        <Image src={heroImage} alt="logo" className={styles.heroImage} fill />
+      </div>
     </div>
   );
 }

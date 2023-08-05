@@ -38,6 +38,7 @@ export type IndustryType = {
   name: string;
   description: string;
   image: string;
+  id: string;
 };
 
 export type AchievementType = {
@@ -164,4 +165,5 @@ export type ServicesWrapperType = {
   amount?: "all" | "some";
   duration?: number;
   nodelay?: boolean;
+  styles?: object;
 };
