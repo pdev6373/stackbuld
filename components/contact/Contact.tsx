@@ -5,6 +5,7 @@ import styles from "./Contaxct.module.css";
 import Image from "next/image";
 import { FormFieldType, FormValueType } from "@/types";
 import axios from "axios";
+import { SectionWrapper } from "..";
 
 export default function Contact() {
   const [error, setError] = useState("");
@@ -125,15 +126,19 @@ export default function Contact() {
     <section className={styles.contact}>
       <div className={styles.contactTop}>
         <div className={styles.contactHeader}>
-          <h3 className={styles.sectionTitleDark}>
-            Talk to us
-            <span className={`${styles.sectionTitleDark} ${styles.dot}`}>
-              .
-            </span>
-          </h3>
-          <p className={styles.sectionBodyDark}>
-            Let’s create something great together
-          </p>
+          <SectionWrapper>
+            <h3 className={styles.sectionTitleDark}>
+              Talk to us
+              <span className={`${styles.sectionTitleDark} ${styles.dot}`}>
+                .
+              </span>
+            </h3>
+          </SectionWrapper>
+          <SectionWrapper>
+            <p className={styles.sectionBodyDark}>
+              Let’s create something great together
+            </p>
+          </SectionWrapper>
         </div>
 
         <Image

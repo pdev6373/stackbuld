@@ -1,6 +1,7 @@
 import { AttributeType } from "@/types";
 import Image from "next/image";
 import styles from "./Attribute.module.css";
+import { SectionWrapper } from "..";
 
 export default function Attribute({
   headerTitle,
@@ -22,12 +23,18 @@ export default function Attribute({
       </div>
 
       <div className={styles.texts}>
-        <h3 className={styles.title}>
-          {headerTitle} <span className={styles.titleInner}>{header}</span>
-          <span className={`${styles.title} ${styles.dot}`}>.</span>
-        </h3>
-        <p className={styles.text}>{text1}</p>
-        <p className={styles.text}>{text2}</p>
+        <SectionWrapper>
+          <h3 className={styles.title}>
+            {headerTitle} <span className={styles.titleInner}>{header}</span>
+            <span className={`${styles.title} ${styles.dot}`}>.</span>
+          </h3>
+        </SectionWrapper>
+        <SectionWrapper>
+          <p className={styles.text}>{text1}</p>
+        </SectionWrapper>
+        <SectionWrapper>
+          <p className={styles.text}>{text2}</p>
+        </SectionWrapper>
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import { SectionWrapper } from "..";
 import styles from "./Industries.module.css";
 import { Industries as IndustriesComponent } from "@/constants";
 
@@ -5,13 +6,19 @@ export default function Industries() {
   return (
     <section className={styles.industries}>
       <div className={styles.industriesHeader}>
-        <h3 className={styles.sectionTitleDark}>
-          Key industries
-          <span className={`${styles.sectionTitleDark} ${styles.dot}`}>.</span>
-        </h3>
-        <p className={styles.sectionBodyDark}>
-          Domains we have mastered and conquered
-        </p>
+        <SectionWrapper>
+          <h3 className={styles.sectionTitleDark}>
+            Key industries
+            <span className={`${styles.sectionTitleDark} ${styles.dot}`}>
+              .
+            </span>
+          </h3>
+        </SectionWrapper>
+        <SectionWrapper>
+          <p className={styles.sectionBodyDark}>
+            Domains we have mastered and conquered
+          </p>
+        </SectionWrapper>
       </div>
 
       <div className={styles.industriesWrapper}>

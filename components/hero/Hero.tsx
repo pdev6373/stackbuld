@@ -1,7 +1,7 @@
+import { HeroType } from "@/types";
+import { Header, SectionWrapper } from "..";
 import Image from "next/image";
 import styles from "./Hero.module.css";
-import { HeroType } from "@/types";
-import { Header } from "..";
 import Link from "next/link";
 
 export default function Hero({
@@ -25,6 +25,7 @@ export default function Hero({
         invertButton={invertButton}
         contactRoute={contactRoute}
       />
+
       <section className={styles.heroWrapper}>
         <div
           className={
@@ -34,34 +35,42 @@ export default function Hero({
           }
         >
           {type === "services" && (
-            <p
-              className={styles.serviceType}
-              style={{
-                background: serviceTitleBackground,
-                color: serviceTitleColor,
-              }}
-            >
-              {serviceTitleText}
-            </p>
+            <SectionWrapper>
+              <p
+                className={styles.serviceType}
+                style={{
+                  background: serviceTitleBackground,
+                  color: serviceTitleColor,
+                }}
+              >
+                {serviceTitleText}
+              </p>
+            </SectionWrapper>
           )}
-          <h3
-            className={`${styles.heroTitle} ${
-              type === "services" && styles.heroServiceTitle
-            }`}
-            style={titleStyles}
-          >
-            {title}
-            <span className={styles.dot}>.</span>
-          </h3>
+          <SectionWrapper>
+            <h3
+              className={`${styles.heroTitle} ${
+                type === "services" && styles.heroServiceTitle
+              }`}
+              style={titleStyles}
+            >
+              {title}
+              <span className={styles.dot}>.</span>
+            </h3>
+          </SectionWrapper>
 
           {type !== "about" && type !== "services" && (
-            <p className={styles.heroBody}>{content}</p>
+            <SectionWrapper>
+              <p className={styles.heroBody}>{content}</p>
+            </SectionWrapper>
           )}
 
           {type !== "about" && (
-            <Link className={styles.heroButton} href={contactRoute}>
-              Contact us
-            </Link>
+            <SectionWrapper>
+              <Link className={styles.heroButton} href={contactRoute}>
+                Contact us
+              </Link>
+            </SectionWrapper>
           )}
         </div>
 

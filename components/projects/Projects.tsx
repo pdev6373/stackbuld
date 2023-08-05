@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./Projects.module.css";
 import { Images } from "@/constants";
 import { ProjectType } from "@/types";
+import { SectionWrapper } from "..";
 
 export default function Projects() {
   const [projects, setProjects] = useState<ProjectType[]>([
@@ -90,13 +91,17 @@ export default function Projects() {
     <section className={styles.projects}>
       <div className={styles.projectsHeader}>
         <div className={styles.projectsHeaderTexts}>
-          <h3 className={styles.sectionTitle}>
-            Featured Projects
-            <span className={`${styles.sectionTitle} ${styles.dot}`}>.</span>
-          </h3>
-          <p className={styles.sectionBody}>
-            The work we have done & the people we have helped
-          </p>
+          <SectionWrapper>
+            <h3 className={styles.sectionTitle}>
+              Featured Projects
+              <span className={`${styles.sectionTitle} ${styles.dot}`}>.</span>
+            </h3>
+          </SectionWrapper>
+          <SectionWrapper>
+            <p className={styles.sectionBody}>
+              The work we have done & the people we have helped
+            </p>
+          </SectionWrapper>
         </div>
 
         <div className={styles.projectsNavigation}>

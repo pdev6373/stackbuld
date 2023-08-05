@@ -1,8 +1,9 @@
 "use client";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, Fragment } from "react";
 import Image from "next/image";
 import styles from "./HowWeWork.module.css";
 import { HowWeWork as HowWeWorkConstant, Images } from "@/constants";
+import { SectionWrapper } from "..";
 
 export default function HowWeWork() {
   const mainRef = useRef<any>();
@@ -49,13 +50,17 @@ export default function HowWeWork() {
   return (
     <section className={styles.wrapper}>
       <div className={styles.header}>
-        <h3 className={styles.sectionTitle}>
-          How we work
-          <span className={`${styles.sectionTitle} ${styles.dot}`}>.</span>
-        </h3>
-        <p className={styles.sectionBody}>
-          The steps we take to help you achieve your goals.
-        </p>
+        <SectionWrapper>
+          <h3 className={styles.sectionTitle}>
+            How we work
+            <span className={`${styles.sectionTitle} ${styles.dot}`}>.</span>
+          </h3>
+        </SectionWrapper>
+        <SectionWrapper>
+          <p className={styles.sectionBody}>
+            The steps we take to help you achieve your goals.
+          </p>
+        </SectionWrapper>
       </div>
 
       <div className={styles.mainWrapper} ref={mainRef}>
@@ -112,42 +117,60 @@ export default function HowWeWork() {
                   : null
               }
             >
-              <div className={styles.headerTexts}>
-                <p className={styles.headerText}>{index + 1}.</p>
-                <h3 className={styles.headerText}>{item.heading}</h3>
+              <SectionWrapper>
+                <div className={styles.headerTexts}>
+                  <p className={styles.headerText}>{index + 1}.</p>
+                  <h3 className={styles.headerText}>{item.heading}</h3>
+                </div>
+              </SectionWrapper>
+
+              <div className={styles.processSection}>
+                <SectionWrapper>
+                  <p className={styles.headerBodyText}>{item.text1}</p>
+                </SectionWrapper>
+                <SectionWrapper>
+                  <p className={styles.headerBodyText}>{item.text2}</p>
+                </SectionWrapper>
               </div>
 
               <div className={styles.processSection}>
-                <p className={styles.headerBodyText}>{item.text1}</p>
-                <p className={styles.headerBodyText}>{item.text2}</p>
-              </div>
-
-              <div className={styles.processSection}>
-                <h3 className={styles.processTitle}>
-                  {item.deliverables.title}
-                </h3>
+                <SectionWrapper>
+                  <h3 className={styles.processTitle}>
+                    {item.deliverables.title}
+                  </h3>
+                </SectionWrapper>
 
                 <div className={styles.processList}>
                   {item.deliverables.list.map((item, index) => (
-                    <div className={styles.processItem} key={index}>
-                      <p className={styles.processItemText}>{index + 1}.</p>
-                      <h3 className={styles.processItemText}>{item}</h3>
-                    </div>
+                    <Fragment key={index}>
+                      <SectionWrapper>
+                        <div className={styles.processItem}>
+                          <p className={styles.processItemText}>{index + 1}.</p>
+                          <h3 className={styles.processItemText}>{item}</h3>
+                        </div>
+                      </SectionWrapper>
+                    </Fragment>
                   ))}
                 </div>
               </div>
 
               <div className={styles.processSection}>
-                <h3 className={styles.processTitle}>
-                  {item.teamMemebers.title}
-                </h3>
+                <SectionWrapper>
+                  <h3 className={styles.processTitle}>
+                    {item.teamMemebers.title}
+                  </h3>
+                </SectionWrapper>
 
                 <div className={styles.processListGrid}>
                   {item.teamMemebers.list.map((item, index) => (
-                    <div className={styles.processItem} key={index}>
-                      <p className={styles.processItemText}>{index + 1}.</p>
-                      <h3 className={styles.processItemText}>{item}</h3>
-                    </div>
+                    <Fragment key={index}>
+                      <SectionWrapper>
+                        <div className={styles.processItem}>
+                          <p className={styles.processItemText}>{index + 1}.</p>
+                          <h3 className={styles.processItemText}>{item}</h3>
+                        </div>
+                      </SectionWrapper>
+                    </Fragment>
                   ))}
                 </div>
               </div>

@@ -4,6 +4,7 @@ import { Images, ServiceFeatures as ServiceConstant } from "@/constants";
 import Image from "next/image";
 import styles from "./ServiceFeatures.module.css";
 import { ServicePageType } from "@/types";
+import { SectionWrapper } from "..";
 
 type ServiceFeaturesType = {
   serviceFeatures: ServicePageType;
@@ -105,12 +106,20 @@ export default function ServiceFeatures({
             }
           >
             <div className={styles.featureMain}>
-              <Image src={item.topIcon} alt="icon" width={56} height={56} />
+              <SectionWrapper>
+                <Image src={item.topIcon} alt="icon" width={56} height={56} />
+              </SectionWrapper>
 
               <div className={styles.featureTextsWrapper}>
-                <h3 className={styles.featureHeader}>{item.title}</h3>
-                <p className={styles.featureBody}>{item.text1}</p>
-                <p className={styles.featureBody}>{item.text2}</p>
+                <SectionWrapper>
+                  <h3 className={styles.featureHeader}>{item.title}</h3>
+                </SectionWrapper>
+                <SectionWrapper>
+                  <p className={styles.featureBody}>{item.text1}</p>
+                </SectionWrapper>{" "}
+                <SectionWrapper>
+                  <p className={styles.featureBody}>{item.text2}</p>
+                </SectionWrapper>
               </div>
 
               <div

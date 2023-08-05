@@ -1,6 +1,9 @@
+.reviewOuter {
+  grid-column: span 3;
+}
+
 .review {
   background: #161a1d;
-  grid-column: span 3;
   display: flex;
   border-radius: 16px;
   overflow: hidden;

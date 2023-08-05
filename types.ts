@@ -155,3 +155,12 @@ export type ServicesHeroType = {
   heroBackground: string;
   heroColor: string;
 };
+
+export type ServicesWrapperType = {
+  children: JSX.Element;
+  width?: "fit-content" | "100%";
+  margin?: string;
+  type?: "cover" | "fade-in";
+  amount?: "all" | "some";
+  duration?: number;
+};

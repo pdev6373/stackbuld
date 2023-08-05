@@ -1,4 +1,4 @@
-import { Review, Service } from "..";
+import { Review, SectionWrapper, Service } from "..";
 import { Services as ServicesConstant } from "@/constants";
 import styles from "./Services.module.css";
 import { Fragment } from "react";
@@ -7,13 +7,17 @@ export default function Services() {
   return (
     <section className={styles.services}>
       <div className={styles.servicesHeader}>
-        <h3 className={styles.sectionTitle}>
-          Services we offer
-          <span className={`${styles.sectionTitle} ${styles.dot}`}>.</span>
-        </h3>
-        <p className={styles.sectionBody}>
-          End-to-end solutions for your business
-        </p>
+        <SectionWrapper>
+          <h3 className={styles.sectionTitle}>
+            Services we offer
+            <span className={`${styles.sectionTitle} ${styles.dot}`}>.</span>
+          </h3>
+        </SectionWrapper>
+        <SectionWrapper>
+          <p className={styles.sectionBody}>
+            End-to-end solutions for your business
+          </p>
+        </SectionWrapper>
       </div>
 
       <div className={styles.servicesMobile}>

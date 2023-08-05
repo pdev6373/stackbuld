@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import {
   Hero,
   Projects,
+  SectionWrapper,
   ServiceFeatures,
   Video,
   WhyStackbuld,
@@ -60,8 +61,14 @@ export default function Service() {
         serviceTitleText={currentService.heroTopTitle}
       />
       <div className={styles.sectionTitleWrapper}>
-        <span className={styles.sectionTitle}>{currentService.bodyTitle}</span>
-        <span className={`${styles.sectionTitle} ${styles.dot}`}>.</span>
+        <SectionWrapper>
+          <>
+            <span className={styles.sectionTitle}>
+              {currentService.bodyTitle}
+            </span>
+            <span className={`${styles.sectionTitle} ${styles.dot}`}>.</span>
+          </>
+        </SectionWrapper>
       </div>
 
       <div className={styles.videoWrapper}>

@@ -1,14 +1,17 @@
 import { Achievements, Images } from "@/constants";
 import Image from "next/image";
 import styles from "./Quotes.module.css";
+import { SectionWrapper } from "..";
 
 export default function Quotes() {
   return (
     <section className={styles.quotes}>
-      <h3 className={styles.sectionTitleDark}>
-        Just don’t take our word for it, hear from others
-        <span className={`${styles.sectionTitleDark} ${styles.dot}`}>.</span>
-      </h3>
+      <SectionWrapper>
+        <h3 className={styles.sectionTitleDark}>
+          Just don’t take our word for it, hear from others
+          <span className={`${styles.sectionTitleDark} ${styles.dot}`}>.</span>
+        </h3>
+      </SectionWrapper>
 
       <div className={styles.quotesWrapper}>
         <div className={styles.achievements}>
@@ -54,52 +57,62 @@ export default function Quotes() {
         <div className={styles.quotesDisplay}>
           <div className={styles.displayOverlay}></div>
           <div className={styles.quotesHeader}>
-            <p className={styles.quoteTitle}>
-              “Quote from a satisfied customer that speaks good about our
-              services and lends social proof to what we do”
-            </p>
+            <SectionWrapper>
+              <p className={styles.quoteTitle}>
+                “Quote from a satisfied customer that speaks good about our
+                services and lends social proof to what we do”
+              </p>
+            </SectionWrapper>
 
-            <div className={styles.reviewBody}>
-              <Image
-                src={Images.profileTwo}
-                alt="profile image"
-                width={56}
-                height={56}
-                className={styles.profileImage}
-              />
+            <SectionWrapper>
+              <div className={styles.reviewBody}>
+                <Image
+                  src={Images.profileTwo}
+                  alt="profile image"
+                  width={56}
+                  height={56}
+                  className={styles.profileImage}
+                />
 
-              <Image
-                src={Images.profileTwo}
-                alt="profile image"
-                width={40}
-                height={40}
-                className={styles.profileImageMobile}
-              />
+                <Image
+                  src={Images.profileTwo}
+                  alt="profile image"
+                  width={40}
+                  height={40}
+                  className={styles.profileImageMobile}
+                />
 
-              <div className={styles.reviewDetails}>
-                <p className={styles.reviewName}>Firstname Lastname</p>
-                <p className={styles.reviewRole}>Role, Company</p>
+                <div className={styles.reviewDetails}>
+                  <p className={styles.reviewName}>Firstname Lastname</p>
+                  <p className={styles.reviewRole}>Role, Company</p>
+                </div>
               </div>
-            </div>
+            </SectionWrapper>
           </div>
 
           <div className={styles.quotesBottom}>
             <div className={styles.quotesBottomMain}>
-              <p className={styles.quotesBottomTitle}>
-                FirstNation & Sons International
-              </p>
-              <p className={styles.quotesBottomText}>
-                UI/UX Design, Software Development, Maintenance
-              </p>
-              <div className={styles.quoteTime}>
-                <Image
-                  src={Images.clock}
-                  alt="profile image"
-                  width={24}
-                  height={24}
-                />
-                <p className={styles.quotesBottomText}>4 weeks</p>
-              </div>
+              <SectionWrapper>
+                <p className={styles.quotesBottomTitle}>
+                  FirstNation & Sons International
+                </p>
+              </SectionWrapper>
+              <SectionWrapper>
+                <p className={styles.quotesBottomText}>
+                  UI/UX Design, Software Development, Maintenance
+                </p>
+              </SectionWrapper>
+              <SectionWrapper>
+                <div className={styles.quoteTime}>
+                  <Image
+                    src={Images.clock}
+                    alt="profile image"
+                    width={24}
+                    height={24}
+                  />
+                  <p className={styles.quotesBottomText}>4 weeks</p>
+                </div>
+              </SectionWrapper>
             </div>
 
             <div className={styles.quotesNavigation}>

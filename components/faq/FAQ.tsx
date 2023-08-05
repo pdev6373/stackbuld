@@ -4,6 +4,7 @@ import styles from "./FAQ.module.css";
 import Image from "next/image";
 import { useState } from "react";
 import { FAQType } from "@/types";
+import { SectionWrapper } from "..";
 
 export default function FAQ() {
   const [currentFAQ, setCurrentFAQ] = useState<FAQType>(FAQs[0]);
@@ -11,11 +12,19 @@ export default function FAQ() {
   return (
     <section className={styles.wrapper}>
       <div className={styles.faqHeader}>
-        <h3 className={styles.sectionTitleDark}>
-          FAQs
-          <span className={`${styles.sectionTitleDark} ${styles.dot}`}>.</span>
-        </h3>
-        <p className={styles.sectionBodyDark}>Our frequently asked questions</p>
+        <SectionWrapper>
+          <h3 className={styles.sectionTitleDark}>
+            FAQs
+            <span className={`${styles.sectionTitleDark} ${styles.dot}`}>
+              .
+            </span>
+          </h3>
+        </SectionWrapper>
+        <SectionWrapper>
+          <p className={styles.sectionBodyDark}>
+            Our frequently asked questions
+          </p>
+        </SectionWrapper>
       </div>
 
       <div className={styles.faqs}>

@@ -1,27 +1,35 @@
 import { Achievements, Companies as CompaniesConstant } from "@/constants";
 import Image from "next/image";
 import styles from "./Companies.module.css";
+import { SectionWrapper } from "..";
+import { Fragment } from "react";
 
 export default function Companies() {
   return (
     <section className={styles.wrapper}>
-      <h3 className={styles.header}>
-        We have the privilege of working with ambitious companies to create
-        world-class solutions.
-      </h3>
+      <SectionWrapper>
+        <h3 className={styles.header}>
+          We have the privilege of working with ambitious companies to create
+          world-class solutions.
+        </h3>
+      </SectionWrapper>
 
       <div className={styles.imagesWrapper}>
         {CompaniesConstant.map((company, index) => (
-          <div className={styles.imageWrapperOuter} key={index}>
-            <div className={styles.imageWrapper}>
-              <Image
-                src={company}
-                alt="company image"
-                className={styles.image}
-                fill
-              />
-            </div>
-          </div>
+          <Fragment key={index}>
+            <SectionWrapper>
+              <div className={styles.imageWrapperOuter}>
+                <div className={styles.imageWrapper}>
+                  <Image
+                    src={company}
+                    alt="company image"
+                    className={styles.image}
+                    fill
+                  />
+                </div>
+              </div>
+            </SectionWrapper>
+          </Fragment>
         ))}
       </div>
 
