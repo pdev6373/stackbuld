@@ -17,3 +17,4 @@ export { default as HowWeWork } from "./howWeWork/HowWeWork";
 export { default as WhyStackbuld } from "./whyStackbuld/WhyStackbuld";
 export { default as ServiceFeatures } from "./serviceFeatures/ServiceFeatures";
 export { default as SectionWrapper } from "./sectionWrapper/SectionWrapper";
+export { default as ServicePage } from "./servicePage/ServicePage";

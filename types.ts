@@ -104,6 +104,7 @@ export type AttributeType = {
 };
 
 export type FAQType = {
+  isHidden: boolean;
   question: string;
   answer: string;
 };

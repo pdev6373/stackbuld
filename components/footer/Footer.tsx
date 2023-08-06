@@ -70,15 +70,17 @@ export default function Footer() {
               <>
                 <div className={styles.socialIconsMobile}>
                   <SectionWrapper type="fade-in">
-                    <Image
-                      src={Images.twitter}
-                      alt="social icon"
-                      width={32}
-                      height={32}
-                      className={styles.socialIcon}
-                    />
+                    <a href="https://twitter.com/stackbuld/" target="_blank">
+                      <Image
+                        src={Images.twitter}
+                        alt="social icon"
+                        width={32}
+                        height={32}
+                        className={styles.socialIcon}
+                      />
+                    </a>
                   </SectionWrapper>
-                  <SectionWrapper type="fade-in">
+                  {/* <SectionWrapper type="fade-in">
                     <Image
                       src={Images.facebook}
                       alt="social icon"
@@ -95,21 +97,23 @@ export default function Footer() {
                       height={32}
                       className={styles.socialIcon}
                     />
-                  </SectionWrapper>
+                  </SectionWrapper> */}
                 </div>
 
                 <div className={styles.socialIcons}>
                   <SectionWrapper type="fade-in">
-                    <Image
-                      src={Images.twitter}
-                      alt="social icon"
-                      width={40}
-                      height={40}
-                      className={styles.socialIcon}
-                    />
+                    <a href="https://twitter.com/stackbuld/" target="_blank">
+                      <Image
+                        src={Images.twitter}
+                        alt="social icon"
+                        width={40}
+                        height={40}
+                        className={styles.socialIcon}
+                      />
+                    </a>
                   </SectionWrapper>
 
-                  <SectionWrapper type="fade-in">
+                  {/* <SectionWrapper type="fade-in">
                     <Image
                       src={Images.facebook}
                       alt="social icon"
@@ -127,7 +131,7 @@ export default function Footer() {
                       height={40}
                       className={styles.socialIcon}
                     />
-                  </SectionWrapper>
+                  </SectionWrapper> */}
                 </div>
               </>
             ) : null}

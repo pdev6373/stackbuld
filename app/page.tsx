@@ -6,7 +6,6 @@ import {
   Services,
   Video,
   Industries,
-  Header,
 } from "@/components";
 import { Images } from "@/constants";
 

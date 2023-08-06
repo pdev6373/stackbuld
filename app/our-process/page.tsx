@@ -1,7 +1,15 @@
 import { Contact, FAQ, Hero, HowWeWork } from "@/components";
 import { Images } from "@/constants";
 
-export default function page() {
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Process - Stackbuld",
+  description:
+    "We harness the boundless power of technology and innovation and elevate your business performance. Your Vision brought to life by Our Expertise.",
+};
+
+export default function OurProcess() {
   return (
     <main>
       <Hero

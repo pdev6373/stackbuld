@@ -1,11 +1,13 @@
 "use client";
-import { FormEvent, useState } from "react";
+import { FormEvent, useCallback, useState, useEffect } from "react";
 import { Images } from "@/constants";
 import styles from "./Contaxct.module.css";
 import Image from "next/image";
 import { FormFieldType, FormValueType } from "@/types";
 import axios from "axios";
 import { SectionWrapper } from "..";
+import { useExecuteReCaptcha } from "@rusted/react-recaptcha-v3";
+import { verifyCaptchaAction } from "@/app/_actions/Captcha";
 
 export default function Contact() {
   const [error, setError] = useState("");
@@ -13,7 +15,10 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [sendError, setSendError] = useState("");
   const [isSuccessful, setIsSuccessful] = useState(false);
+  const [isHuman, setIsHuman] = useState(false);
   const [file, setFile] = useState<any>(null);
+
+  const executeRecaptcha = useExecuteReCaptcha();
 
   const [formFields, setFormFields] = useState<FormFieldType[]>([
     {
@@ -49,6 +54,17 @@ export default function Contact() {
     },
   ]);
 
+  const handleReCaptchaVerify = useCallback(async () => {
+    const token = await executeRecaptcha("contact");
+    const verified = await verifyCaptchaAction(token);
+
+    verified ? setIsHuman(true) : setIsHuman(false);
+  }, [executeRecaptcha]);
+
+  useEffect(() => {
+    handleReCaptchaVerify();
+  }, [handleReCaptchaVerify]);
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -78,8 +94,20 @@ export default function Contact() {
       return;
     }
 
-    // const formData = new FormData();
-    // !!file.name.length && formData.append("attachment", file);
+    if (!isHuman) {
+      setError("Google ReCaptcha Failed");
+      return;
+    }
+
+    const formData = new FormData();
+    !!file?.name?.length && formData.append("Attachment", file);
+    formData.append("Full Name", formValues.fullname);
+    formData.append("Email", formValues.email);
+    formData.append("Mesage", message);
+    formValues?.companyName?.length &&
+      formData.append("Company Name", formValues.companyName);
+    formValues?.phoneNumber?.length &&
+      formData.append("Phone Number", formValues.phoneNumber);
 
     try {
       setLoading(true);
@@ -88,11 +116,12 @@ export default function Contact() {
 
       await axios({
         method: "POST",
-        url: "https://formspree.io/f/xjvqgjyq",
-        // data: { ...formValues, message, attachment: formData },
-        data: { ...formValues, message },
+        // url: "https://data.endpoint.space/clkxto92x000308mcs9y9rl5e",
+        url: "https://usebasin.com/f/dec2778f04b3",
+        data: formData,
         headers: {
-          "content-type": "multipart/form-data",
+          Accept: "application/json",
+          "Content-Type": "multipart/form-data",
         },
       });
 
@@ -104,22 +133,6 @@ export default function Contact() {
     } finally {
       setLoading(false);
     }
-
-    // fetch("https://formbold.com/s/3NKdg", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-type": "application/json",
-    //   },
-    //   // body: JSON.stringify(formValues),
-    //   body: JSON.stringify({ ...formValues, message }),
-    // })
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //   })
-    //   .catch((error) => {
-    //     console.error(error);
-    //   });
   };
 
   return (
@@ -196,6 +209,7 @@ export default function Contact() {
                 type={field.type}
                 id={field.label}
                 value={field.value}
+                name={field.name}
                 onChange={(e) => {
                   setError("");
                   setFormFields(
@@ -214,7 +228,9 @@ export default function Contact() {
             </div>
           ))}
 
-          <div className={styles.formInputWrapper}>
+          <div
+            className={`${styles.formInputWrapper} ${styles.formInputWrapperMessage}`}
+          >
             <label htmlFor="messageId" className={styles.formLabel}>
               Your message for us*
             </label>
@@ -229,21 +245,30 @@ export default function Contact() {
             ></textarea>
           </div>
 
-          <div className={styles.attachment}>
-            <Image
-              src={Images.attachment}
-              alt="attachment"
-              width={32}
-              height={32}
-            />
-            <p className={styles.attachmentText}>Add attachment</p>
-            {/* <input
-              onChange={(e: any) => setFile(e.target.files[0])}
-              type="file"
-              name="attachment"
-              accept="application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint, text/plain, application/pdf, image/*"
-            ></input> */}
+          <div className={styles.fileAttachmentWrapper}>
+            <label className={styles.attachment} htmlFor="fileAttachment">
+              <Image
+                src={Images.attachment}
+                alt="attachment"
+                width={32}
+                height={32}
+              />
+              <p className={styles.attachmentText}>Add attachment</p>
+            </label>
+
+            {file?.name?.length && (
+              <p className={styles.attachmentSelectedText}>{file.name}</p>
+            )}
           </div>
+
+          <input
+            className={styles.fileAttachment}
+            onChange={(e: any) => setFile(e.target.files[0])}
+            type="file"
+            name="attachment"
+            accept="application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint, text/plain, application/pdf, image/*"
+            id="fileAttachment"
+          ></input>
 
           {!!error.length && <p className={styles.error}>{error}</p>}
           <button
@@ -260,6 +285,26 @@ export default function Contact() {
               "Send message"
             )}
           </button>
+        </div>
+
+        <div className={styles.captchaWrapper}>
+          <small className={styles.captchaText}>
+            This site is protected by reCAPTCHA and the Google{" "}
+            <a
+              href="https://policies.google.com/privacy"
+              className={styles.captchaTextAccent}
+            >
+              Privacy Policy
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://policies.google.com/terms"
+              className={styles.captchaTextAccent}
+            >
+              Terms of Service
+            </a>{" "}
+            apply.
+          </small>
         </div>
       </form>
     </section>

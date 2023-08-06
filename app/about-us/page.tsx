@@ -1,8 +1,14 @@
 import { Attributes, Companies, Hero, Industries, Video } from "@/components";
-import styles from "./page.module.css";
+import { Metadata } from "next";
 import { Images } from "@/constants";
+import styles from "./page.module.css";
 
-export default function page() {
+export const metadata: Metadata = {
+  title: "About - Stackbuld",
+  description: "We transform businesses with technology.",
+};
+
+export default function About() {
   return (
     <main>
       <Hero

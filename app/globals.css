@@ -43,3 +43,7 @@ textarea {
   outline: none;
   border: none;
 }
+
+.grecaptcha-badge {
+  visibility: hidden;
+}

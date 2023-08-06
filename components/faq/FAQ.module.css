@@ -31,37 +31,15 @@
   color: #4b5e71;
 }
 
-.question {
-  color: #f6f7f9;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.45;
-}
-
-.answer {
-  height: 0;
-  overflow: hidden;
-  transition: 0.7s ease-in;
-  opacity: 0;
-  position: relative;
-  color: #a3b2c2;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.625;
-  max-width: 750px;
-  width: 90%;
-}
-
-.faqCurrent .answer {
-  height: auto;
-  opacity: 1;
-  margin-top: 16px;
-}
-
 .faqs {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.faqOuter {
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .faq {
@@ -73,16 +51,8 @@
   overflow: hidden;
   padding-block: 40px;
   padding-inline: 32px;
-  display: flex;
-  flex-direction: column;
   cursor: pointer;
-  background-blend-mode: darken;
   border: none;
-}
-
-.faqOuter {
-  border-radius: 16px;
-  overflow: hidden;
 }
 
 .questionWrapper {
@@ -90,15 +60,50 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
+  position: relative;
+}
+
+.question {
+  color: #f6f7f9;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.45;
+  background: transparent;
+  text-align: left;
+}
+
+.answer {
+  color: #a3b2c2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.625;
+  max-width: 750px;
+  width: 90%;
+}
+
+.answerWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms, margin-top 500ms;
+  margin-top: 0;
+}
+
+.answerWrapper[aria-hidden="false"] {
+  grid-template-rows: 1fr;
+  margin-top: 16px;
+}
+
+.answerWrapperInner {
+  overflow: hidden;
 }
 
 .faqIcon {
   transform: rotate(0);
-  transition: transform 0.7s ease-in;
 }
 
 .faqIconCurrent {
   transform: rotate(-180deg);
+  transition: transform 500ms;
 }
 
 @media (max-width: 900px) {
@@ -110,7 +115,7 @@
     padding: 32px;
   }
 
-  .faqCurrent .answer {
+  .answerWrapper[aria-hidden="false"] {
     margin-top: 14px;
   }
 }
@@ -158,7 +163,7 @@
     padding: 20px;
   }
 
-  .faqCurrent .answer {
+  .answerWrapper[aria-hidden="false"] {
     margin-top: 12px;
   }
 
