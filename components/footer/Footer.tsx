@@ -89,15 +89,21 @@ export default function Footer() {
                       className={styles.socialIcon}
                     />
                   </SectionWrapper>
-                  <SectionWrapper type="fade-in">
-                    <Image
-                      src={Images.linkedin}
-                      alt="social icon"
-                      width={32}
-                      height={32}
-                      className={styles.socialIcon}
-                    />
-                  </SectionWrapper> */}
+                  */}
+                  <a
+                    href="https://linkedin.com/in/stackbuld-limited-340848259"
+                    target="_blank"
+                  >
+                    <SectionWrapper type="fade-in">
+                      <Image
+                        src={Images.linkedin}
+                        alt="social icon"
+                        width={32}
+                        height={32}
+                        className={styles.socialIcon}
+                      />
+                    </SectionWrapper>
+                  </a>
                 </div>
 
                 <div className={styles.socialIcons}>
@@ -123,15 +129,21 @@ export default function Footer() {
                     />
                   </SectionWrapper>
 
-                  <SectionWrapper type="fade-in">
-                    <Image
-                      src={Images.linkedin}
-                      alt="social icon"
-                      width={40}
-                      height={40}
-                      className={styles.socialIcon}
-                    />
-                  </SectionWrapper> */}
+                */}
+                  <a
+                    href="https://linkedin.com/in/stackbuld-limited-340848259"
+                    target="_blank"
+                  >
+                    <SectionWrapper type="fade-in">
+                      <Image
+                        src={Images.linkedin}
+                        alt="social icon"
+                        width={40}
+                        height={40}
+                        className={styles.socialIcon}
+                      />
+                    </SectionWrapper>{" "}
+                  </a>
                 </div>
               </>
             ) : null}
