@@ -44,6 +44,7 @@ export default function Hero({
         loaded={particlesLoaded}
         options={ParticlesConfig}
       />
+
       <Header
         type={type}
         invertButton={invertButton}
