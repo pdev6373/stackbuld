@@ -71,6 +71,7 @@ export default function Hero({
               </p>
             </SectionWrapper>
           )}
+
           <SectionWrapper type="fade-in" nodelay={true}>
             <h3 className={styles.textCenter} style={titleStyles}>
               <Typed
