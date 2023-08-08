@@ -47,3 +47,11 @@ textarea {
 .grecaptcha-badge {
   visibility: hidden;
 }
+
+.typed-cursor {
+  color: #17c2c2;
+}
+
+#tsparticles {
+  background-color: #161a1d;
+}

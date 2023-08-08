@@ -39,7 +39,10 @@ export default function Header({
           <div className={styles.servicesNavWrapperOuter}>
             <div className={styles.servicesNavWrapper}>
               <h3 className={styles.servicesNavHeader}>
-                Services we offer<span className={styles.dot}>.</span>
+                Services we offer
+                <span className={`${styles.servicesNavHeader} ${styles.dot}`}>
+                  .
+                </span>
               </h3>
 
               <div className={styles.servicesNav}>

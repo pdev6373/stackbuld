@@ -6,8 +6,11 @@ import Image from "next/image";
 import { FormFieldType, FormValueType } from "@/types";
 import axios from "axios";
 import { SectionWrapper } from "..";
-import { useExecuteReCaptcha } from "@rusted/react-recaptcha-v3";
-import { verifyCaptchaAction } from "@/app/_actions/Captcha";
+// import { useExecuteReCaptcha } from "@rusted/react-recaptcha-v3";
+// import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { useReCaptcha } from "next-recaptcha-v3";
+// import { verifyCaptchaAction } from "@/app/api/recaptcha";
+import { handleRecaptcha } from "@/utils/handleRecaptcha";
 
 export default function Contact() {
   const [error, setError] = useState("");
@@ -18,7 +21,8 @@ export default function Contact() {
   const [isHuman, setIsHuman] = useState(false);
   const [file, setFile] = useState<any>(null);
 
-  const executeRecaptcha = useExecuteReCaptcha();
+  // const executeRecaptcha = useExecuteReCaptcha();
+  const { executeRecaptcha } = useReCaptcha();
 
   const [formFields, setFormFields] = useState<FormFieldType[]>([
     {
@@ -54,12 +58,21 @@ export default function Contact() {
     },
   ]);
 
-  const handleReCaptchaVerify = useCallback(async () => {
-    const token = await executeRecaptcha("contact");
-    const verified = await verifyCaptchaAction(token);
+  const handleReCaptchaVerify = async () => {
+    // if (!!executeRecaptcha) {
+    // const token = await executeRecaptcha("LOGIN");
+    // console.log(token);
 
-    verified ? setIsHuman(true) : setIsHuman(false);
-  }, [executeRecaptcha]);
+    const verified = await handleRecaptcha({
+      action: "LOGIN",
+      key: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!,
+    });
+
+    console.log(verified);
+
+    // verified ? setIsHuman(true) : setIsHuman(false);
+    // }
+  };
 
   useEffect(() => {
     handleReCaptchaVerify();
@@ -117,7 +130,8 @@ export default function Contact() {
       await axios({
         method: "POST",
         // url: "https://data.endpoint.space/clkxto92x000308mcs9y9rl5e",
-        url: "https://usebasin.com/f/dec2778f04b3",
+        // url: "https://usebasin.com/f/dec2778f04b3",
+        url: "https://f123e9f9c3929957628df1396e369e41.m.pipedream.net",
         data: formData,
         headers: {
           Accept: "application/json",

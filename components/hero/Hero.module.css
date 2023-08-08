@@ -3,10 +3,11 @@
 }
 
 .container {
-  background: url("../../assets/images/hero-background.png");
+  /* background: url("../../assets/images/hero-background.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
+  background-color: #161a1d;
   min-height: 690px;
   display: flex;
   flex-direction: column;
@@ -48,13 +49,22 @@
 }
 
 .heroTitle {
+  color: #f6f7f9;
   font-size: clamp(40px, 5vw, 72px);
   font-weight: 700;
   line-height: 1.0556;
-  color: #f6f7f9;
   text-align: center;
   margin-bottom: 17px;
   max-width: 1123px;
+  display: block;
+}
+
+.heroTitle * {
+  font-weight: 700;
+}
+
+.textCenter {
+  text-align: center;
 }
 
 .heroServiceTitle {
@@ -94,9 +104,6 @@
 
 .dot {
   color: #17c2c2;
-  font-size: clamp(40px, 5vw, 72px);
-  font-weight: 700;
-  line-height: 1.0556;
 }
 
 .serviceType {

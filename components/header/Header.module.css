@@ -1,6 +1,9 @@
 .headerWrapper {
   padding-bottom: clamp(20px, 5.625vw, 81px);
-  /* position: sticky;
+  /* background-color: #161a1d; */
+  position: relative;
+  z-index: 10;
+  /* position: sticky; 
   top: 0;
   left: 0;
   right: 0; */
@@ -127,8 +130,7 @@
   color: #17c2c2;
 }
 
-.servicesNavHeader,
-.dot {
+.servicesNavHeader {
   font-size: 16px;
   font-weight: 600;
   line-height: 19px;

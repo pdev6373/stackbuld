@@ -14,8 +14,8 @@ export const generateMetadata = ({ params }: Props): Metadata => {
   ) as ServicePageType;
 
   return {
-    title: `Service - ${service.heroTopTitle}`,
-    description: service.bodyTitle,
+    title: `Service - ${service?.heroTopTitle}`,
+    description: service?.bodyTitle,
   };
 };
 

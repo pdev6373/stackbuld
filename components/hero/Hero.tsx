@@ -1,8 +1,15 @@
+"use client";
 import { HeroType } from "@/types";
 import { Header, SectionWrapper } from "..";
 import Image from "next/image";
 import styles from "./Hero.module.css";
 import Link from "next/link";
+import Particles from "react-tsparticles";
+import ParticlesConfig from "@/config/particle-config";
+import { loadFull } from "tsparticles";
+import { useCallback } from "react";
+import type { Container, Engine } from "tsparticles-engine";
+import Typed from "react-typed";
 
 export default function Hero({
   title,
@@ -18,8 +25,25 @@ export default function Hero({
   serviceTitleText,
   contactRoute,
 }: HeroType) {
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(
+    async (container: Container | undefined) => {
+      await console.log(container);
+    },
+    []
+  );
+
   return (
     <div className={styles.container}>
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={ParticlesConfig}
+      />
       <Header
         type={type}
         invertButton={invertButton}
@@ -48,14 +72,16 @@ export default function Hero({
             </SectionWrapper>
           )}
           <SectionWrapper type="fade-in" nodelay={true}>
-            <h3
-              className={`${styles.heroTitle} ${
-                type === "services" && styles.heroServiceTitle
-              }`}
-              style={titleStyles}
-            >
-              {title}
-              <span className={styles.dot}>.</span>
+            <h3 className={styles.textCenter} style={titleStyles}>
+              <Typed
+                className={`${styles.heroTitle} ${
+                  type === "services" && styles.heroServiceTitle
+                }`}
+                strings={[title]}
+                typeSpeed={50}
+                cursorChar="."
+                autoInsertCss={true}
+              />
             </h3>
           </SectionWrapper>
 
@@ -81,7 +107,12 @@ export default function Hero({
         }`}
         style={imageStyles ? imageStyles : {}}
       >
-        <Image src={heroImage} alt="logo" className={styles.heroImage} fill />
+        <Image
+          src={heroImage}
+          alt="hero image"
+          className={styles.heroImage}
+          fill
+        />
       </div>
     </div>
   );
