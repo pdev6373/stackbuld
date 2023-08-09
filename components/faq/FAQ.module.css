@@ -40,6 +40,8 @@
 .faqOuter {
   border-radius: 16px;
   overflow: hidden;
+  position: relative;
+  z-index: 10;
 }
 
 .faq {
